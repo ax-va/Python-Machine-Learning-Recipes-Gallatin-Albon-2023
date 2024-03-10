@@ -12,6 +12,8 @@ matrix = np.array([[1, 2, 3, 4],
 matrix.shape
 # (3, 4)
 
+# 3 rows and 4 columns, i.e. dim=3 along axis=0 and dim=4 along axis=1
+
 # Get number of elements (rows * columns)
 matrix.size
 # 12
