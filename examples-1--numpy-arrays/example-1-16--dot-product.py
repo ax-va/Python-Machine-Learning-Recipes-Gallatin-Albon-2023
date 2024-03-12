@@ -13,3 +13,23 @@ np.dot(vector_a, vector_b)
 # In Python 3.5+, use @
 vector_a @ vector_b
 # 32
+
+matrix_a = np.array([[1, 1, 1],
+                     [1, 2, 3]])
+# array([[1, 1, 1],
+#        [1, 2, 3]])
+
+matrix_b = np.array([[1, 1],
+                     [1, 2],
+                     [1, 3]])
+# array([[1, 1],
+#        [1, 2],
+#        [1, 3]])
+
+np.dot(matrix_a, matrix_b)
+# array([[ 3,  6],
+#        [ 6, 14]])
+
+matrix_a @ matrix_b
+# array([[ 3,  6],
+#        [ 6, 14]])
