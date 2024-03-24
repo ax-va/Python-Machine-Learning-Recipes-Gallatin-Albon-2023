@@ -15,3 +15,6 @@ https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_classifi
 ## make_blobs
 
 https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_blobs.html
+
+## json_normalize
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.json_normalize.html
