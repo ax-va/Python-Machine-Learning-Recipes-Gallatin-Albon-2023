@@ -4,7 +4,7 @@ from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-# # # Create SQLite database
+# # # 1. Create SQLite database
 
 # list of dictionaries
 test_scores = [
@@ -70,7 +70,7 @@ with Session() as session:
     session.commit()
 
 
-# # # Read SQL to pd.DataFrame
+# # # 2. Read SQL query in pd.DataFrame
 
 engine = create_engine('sqlite:///../data/sqlite.db')
 dataframe = pd.read_sql_query('SELECT * FROM TestScore', engine)
