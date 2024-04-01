@@ -36,7 +36,3 @@ df.replace(r".st", "First", regex=True).head(3)
 # 0         Allen, Miss Elisabeth Walton  First  29.0  female         1        1
 # 1          Allison, Miss Helen Loraine  First   2.0  female         0        1
 # 2  Allison, Mr Hudson Joshua Creighton  First  30.0    male         0        0
-
-
-
-
