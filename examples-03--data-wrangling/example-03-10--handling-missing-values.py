@@ -1,7 +1,7 @@
 """
-Consider:
-- isnull() is an alias for isna()
-- notnull() is an alias for notna()
+Using:
+- isnull(), an alias for isna()
+- notnull(), an alias for notna()
 - pd.read_csv(url, na_values=('NONE', -999)) to recognize missing values
 - fillna() to fill missing values
 """
