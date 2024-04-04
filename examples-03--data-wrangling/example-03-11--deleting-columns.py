@@ -1,3 +1,7 @@
+"""
+Not recommended to use the pandas inplace=True argument.
+Recommended treating DataFrames as immutable objects.
+"""
 import pandas as pd
 
 url = 'https://raw.githubusercontent.com/chrisalbon/sim_data/master/titanic.csv'
