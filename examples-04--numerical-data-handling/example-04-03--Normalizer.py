@@ -38,7 +38,12 @@ matrix_l2_norm = Normalizer(norm="l2").transform(matrix)
 np.sqrt(matrix_l2_norm[:, 0] ** 2 + matrix_l2_norm[:, 1] ** 2)
 # array([1., 1., 1., 1., 1.])
 
-matrix_l1_norm = Normalizer(norm="l1").transform(matrix)  # l1 = Manhattan norm
+matrix_l1_norm = Normalizer(norm="l1").transform(matrix)  # l1 = Manhattan norm = Taxicab norm
+# array([[0.5       , 0.5       ],
+#        [0.24444444, 0.75555556],
+#        [0.06912442, 0.93087558],
+#        [0.04524008, 0.95475992],
+#        [0.76760563, 0.23239437]])
 
 # Check L1 norms
 matrix_l1_norm[:, 0] + matrix_l1_norm[:, 1]
