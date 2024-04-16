@@ -4,7 +4,7 @@ Rescale the matrix of observations to have unit norm (||row|| = 1 for all rows).
 import numpy as np
 from sklearn.preprocessing import Normalizer
 
-# Create matrix of observations: each row is observations of a feature
+# Create feature matrix: each row is observations of a feature
 matrix = np.array([[0.5, 0.5],
                    [1.1, 3.4],
                    [1.5, 20.2],
