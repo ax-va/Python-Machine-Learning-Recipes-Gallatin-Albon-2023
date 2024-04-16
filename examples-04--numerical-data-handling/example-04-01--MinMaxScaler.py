@@ -1,5 +1,5 @@
 """
-Rescaling the values of numerical features to be between two values.
+Rescale the values of numerical features to be between two values.
 
 Min-max scaling uses the following formula:
 z_i = (x_i - x_min) / (x_max - x_min).
@@ -10,8 +10,8 @@ while min-max scaling is often recommended for neural networks.
 import numpy as np
 from sklearn import preprocessing
 
-# Create features
-features = np.array([[-500.5],
+# Create feature
+feature = np.array([[-500.5],
                     [-100.1],
                     [0],
                     [100.1],
@@ -25,8 +25,8 @@ features = np.array([[-500.5],
 # Create scaler
 minmax_scaler = preprocessing.MinMaxScaler(feature_range=(0, 1))
 
-# Scale features
-features_scaled = minmax_scaler.fit_transform(features)
+# Scale feature
+feature_scaled = minmax_scaler.fit_transform(feature)
 # array([[0.        ],
 #        [0.28571429],
 #        [0.35714286],
@@ -34,9 +34,9 @@ features_scaled = minmax_scaler.fit_transform(features)
 #        [1.        ]])
 
 # Alternatively
-minmax_scaler.fit(features)
+minmax_scaler.fit(feature)
 # MinMaxScaler()
-minmax_scaler.transform(features)
+minmax_scaler.transform(feature)
 # array([[0.        ],
 #        [0.28571429],
 #        [0.35714286],

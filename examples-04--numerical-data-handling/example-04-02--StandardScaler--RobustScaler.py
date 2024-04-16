@@ -1,5 +1,5 @@
 """
-Transform features to have a mean of 0 and a standard deviation of 1.
+Transform feature values to have a mean of 0 and a standard deviation of 1.
 
 This scaling uses the following formula:
 z_i = (x_i - x_mean) / sigma_x.
@@ -12,7 +12,7 @@ See also a z-score in statistics.
 import numpy as np
 from sklearn import preprocessing
 
-# Create features
+# Create feature
 x = np.array([[-1000.1],
               [-200.2],
               [500.5],
