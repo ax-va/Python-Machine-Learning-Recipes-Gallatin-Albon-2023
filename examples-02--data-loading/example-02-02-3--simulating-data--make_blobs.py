@@ -7,7 +7,7 @@ from sklearn.datasets import make_blobs
 # Generate features matrix and target vector
 features, target = make_blobs(
     n_samples=100,
-    n_features=2,  # number of features
+    n_features=2,  # number of features: x_1 nad x_2
     centers=3,  # number of clusters
     cluster_std=0.5,
     shuffle=True,

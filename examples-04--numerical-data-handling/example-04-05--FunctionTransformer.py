@@ -1,7 +1,7 @@
 """
-Apply a custom transformation to features:
-- to np.array
-- to pd.DataFrame
+Apply a custom transformation to features to:
+- np.array
+- pd.DataFrame
 
 An example would be creating a feature that is the natural log of the values of a different feature.
 """
