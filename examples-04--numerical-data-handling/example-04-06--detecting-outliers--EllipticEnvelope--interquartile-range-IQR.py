@@ -84,7 +84,8 @@ lower_bound = q1 - 1.5 * iqr
 upper_bound = q3 + 1.5 * iqr
 # 2.137387576967304
 
-feature_1[1] = 2000  # another outlier
+# Add another outlier
+feature_1[1] = 2000
 feature_1
 # array([ 1.00000000e+04,  2.00000000e+03, -1.61734616e+00, -5.25790464e-01,
 #         8.52518583e-02, -7.94152277e-01, -1.34052081e+00, -1.98197711e+00,
@@ -118,8 +119,9 @@ def outlier_indices(x: np.array) -> np.array:
     q1, q3 = np.percentile(x, [25, 75])
     # Calculate IQR
     iqr = q3 - q1
-    lower_bound = q1 - (iqr * 1.5)
-    upper_bound = q3 + (iqr * 1.5)
+    iqr_times_1_5 = iqr * 1.5
+    lower_bound = q1 - iqr_times_1_5
+    upper_bound = q3 + iqr_times_1_5
     return np.where((x < lower_bound) | (x > upper_bound))[0]
 
 
