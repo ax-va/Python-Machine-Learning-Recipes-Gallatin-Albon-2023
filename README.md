@@ -30,3 +30,6 @@ https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html
 
 ## Three ways to detect outliers
 https://colingorrie.github.io/outlier-detection.html
+
+## NumPy: digitize
+https://numpy.org/doc/stable/reference/generated/numpy.digitize.html
