@@ -33,3 +33,9 @@ https://colingorrie.github.io/outlier-detection.html
 
 ## NumPy: digitize
 https://numpy.org/doc/stable/reference/generated/numpy.digitize.html
+
+## Identifying the 3 Types of Missing Data
+https://measuringu.com/missing-data/
+
+## Missing-data imputation (source?)
+http://www.stat.columbia.edu/~gelman/arm/missing.pdf
