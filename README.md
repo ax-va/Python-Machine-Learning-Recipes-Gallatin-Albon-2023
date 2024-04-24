@@ -39,3 +39,9 @@ https://measuringu.com/missing-data/
 
 ## Missing-data imputation (source?)
 http://www.stat.columbia.edu/~gelman/arm/missing.pdf
+
+## Scikit-Learn: Imputation of missing values
+https://scikit-learn.org/stable/modules/impute.html
+
+## A Study of K-Nearest Neighbour as an Imputation Method
+https://www.researchgate.net/publication/220981745_A_Study_of_K-Nearest_Neighbour_as_an_Imputation_Method
