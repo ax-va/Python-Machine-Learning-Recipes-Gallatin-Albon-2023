@@ -45,3 +45,6 @@ https://scikit-learn.org/stable/modules/impute.html
 
 ## A Study of K-Nearest Neighbour as an Imputation Method
 https://www.researchgate.net/publication/220981745_A_Study_of_K-Nearest_Neighbour_as_an_Imputation_Method
+
+## Overcoming Missing Values In A Random Forest Classifier
+https://medium.com/airbnb-engineering/overcoming-missing-values-in-a-random-forest-classifier-7b1fc1fc03ba
