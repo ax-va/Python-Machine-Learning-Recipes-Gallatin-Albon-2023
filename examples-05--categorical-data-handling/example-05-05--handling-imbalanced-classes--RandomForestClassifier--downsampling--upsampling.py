@@ -1,6 +1,6 @@
 """
 Handle the class imbalance with:
-1. Many Scikit-Learn classifiers have a "class_weight" parameter, also RandomForestClassifier considered below
+1. many Scikit-Learn classifiers have a "class_weight" parameter, also RandomForestClassifier considered below
 2. downsampling the majority class (the class with more observations)
 3. upsampling the minority class (the class with fewer observations)
 """
