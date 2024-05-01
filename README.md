@@ -48,3 +48,6 @@ https://www.researchgate.net/publication/220981745_A_Study_of_K-Nearest_Neighbou
 
 ## Overcoming Missing Values In A Random Forest Classifier
 https://medium.com/airbnb-engineering/overcoming-missing-values-in-a-random-forest-classifier-7b1fc1fc03ba
+
+## Beautiful Soup
+https://www.crummy.com/software/BeautifulSoup/
