@@ -1,8 +1,10 @@
 """
-Break text up into individual words or sentences.
+Break text up into
+- individual words with nltk.tokenize.word_tokenize or
+- sentences nltk.tokenize.sent_tokenize
 
 import nltk # nltk = Natural Language Toolkit
-nltk.download('punkt')  # download the first time
+nltk.download('punkt')  # Download the first time
 """
 
 from nltk.tokenize import word_tokenize, sent_tokenize
