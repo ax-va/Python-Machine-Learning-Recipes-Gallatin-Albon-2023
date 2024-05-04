@@ -51,3 +51,6 @@ https://medium.com/airbnb-engineering/overcoming-missing-values-in-a-random-fore
 
 ## Beautiful Soup
 https://www.crummy.com/software/BeautifulSoup/
+
+## The Porter Stemming Algorithm
+https://tartarus.org/martin/PorterStemmer/
