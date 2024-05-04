@@ -104,7 +104,7 @@ upper_bound = q3 + 1.5 * iqr
 
 
 # Create a function to return index of outliers
-def outlier_indices(x: np.array) -> np.array:
+def get_outlier_indices(x: np.array) -> np.array:
     """
     Returns indices of outliers using the interquartile range (IQR).
     IQR is the difference between the third and first quartiles of a vector.
@@ -126,5 +126,5 @@ def outlier_indices(x: np.array) -> np.array:
 
 
 # Detect two outliers
-outlier_indices(feature_1)
+get_outlier_indices(feature_1)
 # array([0, 1])
