@@ -1,5 +1,5 @@
 """
-Tag each word or character in text data with its part of speech.
+Tag each word or character in text data with its part of speech with NLTK.
 
 NLTK uses the Penn Treebank parts for speech tags.
 

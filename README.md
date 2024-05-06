@@ -54,3 +54,6 @@ https://www.crummy.com/software/BeautifulSoup/
 
 ## The Porter Stemming Algorithm
 https://tartarus.org/martin/PorterStemmer/
+
+# spaCy
+https://spacy.io/usage/linguistic-features#named-entities

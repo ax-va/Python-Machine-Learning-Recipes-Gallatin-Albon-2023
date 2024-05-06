@@ -1,5 +1,5 @@
 """
-Remove extremely common words (e.g., a, is, of, on) from tokenized text data.
+Remove extremely common words (e.g., a, is, of, on) from tokenized text data with NLTK.
 That common words themselves contain little information value.
 
 Needed:

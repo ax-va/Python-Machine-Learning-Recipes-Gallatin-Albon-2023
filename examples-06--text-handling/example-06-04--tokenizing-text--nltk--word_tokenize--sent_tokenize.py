@@ -1,5 +1,5 @@
 """
-Break text up into
+Break text up with NLTK into
 - individual words with nltk.tokenize.word_tokenize or
 - sentences nltk.tokenize.sent_tokenize
 

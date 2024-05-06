@@ -1,4 +1,6 @@
 """
+Stem words with NLTK.
+
 Stem words = convert words into their root forms.
 
 Stemmed words we are less readable to humans but closer to its base meaning
