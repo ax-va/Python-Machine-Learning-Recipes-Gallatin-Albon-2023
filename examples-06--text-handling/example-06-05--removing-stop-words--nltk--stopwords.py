@@ -2,6 +2,7 @@
 Remove extremely common words (e.g., a, is, of, on) from tokenized text data.
 That common words themselves contain little information value.
 
+Needed:
 import nltk
 nltk.download('stopwords')  # Download the set of stop words the first time
 """

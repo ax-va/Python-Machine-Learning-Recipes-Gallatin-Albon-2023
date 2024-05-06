@@ -3,6 +3,7 @@ Break text up into
 - individual words with nltk.tokenize.word_tokenize or
 - sentences nltk.tokenize.sent_tokenize
 
+Needed:
 import nltk # nltk = Natural Language Toolkit
 nltk.download('punkt')  # Download the first time
 """

@@ -3,8 +3,7 @@ Tag each word or character in text data with its part of speech.
 
 NLTK uses the Penn Treebank parts for speech tags.
 
-Examples of the Penn Treebank tags:
-
+Some of the Penn Treebank tags:
 Tag         Part of speech
 NNP         Proper noun, singular
 NN          Noun, singular or mass
@@ -14,12 +13,14 @@ VBG         Verb, gerund or present participle
 JJ          Adjective
 PRP         Personal pronoun
 
-NLTK also gives us the ability to train our own tagger -> a lot of overhead
+All the Penn Treebank tags:
+https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html
 
 Needed:
-
 import nltk
 nltk.download('averaged_perceptron_tagger')
+
+NLTK also gives us the ability to train custom tagger -> a lot of overhead
 """
 from nltk import pos_tag
 from nltk import word_tokenize
