@@ -57,3 +57,6 @@ https://tartarus.org/martin/PorterStemmer/
 
 # spaCy
 https://spacy.io/usage/linguistic-features#named-entities
+
+## Kaggle: Bag of Words Meets Bags of Popcorn
+https://www.kaggle.com/c/word2vec-nlp-tutorial
