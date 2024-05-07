@@ -8,7 +8,7 @@ For example, PCA often works better using standardization,
 while min-max scaling is often recommended for neural networks.
 """
 import numpy as np
-from sklearn import preprocessing
+from sklearn.preprocessing import MinMaxScaler
 
 # Create vector
 x = np.array([[-500.5],
@@ -23,7 +23,7 @@ x = np.array([[-500.5],
 #        [ 900.9]])
 
 # Create scaler
-minmax_scaler = preprocessing.MinMaxScaler(feature_range=(0, 1))
+minmax_scaler = MinMaxScaler(feature_range=(0, 1))
 
 # Scale vector
 x_scaled = minmax_scaler.fit_transform(x)

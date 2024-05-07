@@ -2,13 +2,13 @@ import pandas as pd
 
 url = 'https://raw.githubusercontent.com/chrisalbon/sim_data/master/data.json'
 
-dataframe = pd.read_json(url, orient='columns')
-dataframe.head(2)
+df = pd.read_json(url, orient='columns')
+df.head(2)
 #    integer            datetime  category
 # 0        5 2015-01-01 00:00:00         0
 # 1        5 2015-01-01 00:00:01         0
 
-dataframe.info()
+df.info()
 # <class 'pandas.core.frame.DataFrame'>
 # Index: 100 entries, 0 to 99
 # Data columns (total 3 columns):

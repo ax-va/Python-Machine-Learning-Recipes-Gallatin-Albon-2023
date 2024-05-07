@@ -73,8 +73,8 @@ with Session() as session:
 # # # 2. Read SQL query in pd.DataFrame
 
 engine = create_engine('sqlite:///../data/sqlite.db')
-dataframe = pd.read_sql_query('SELECT * FROM TestScore', engine)
-dataframe.head()
+df = pd.read_sql_query('SELECT * FROM TestScore', engine)
+df.head()
 #    id first_name last_name  age  preTestScore  postTestScore
 # 0   1      Jason    Miller   42             4             25
 # 1   2      Molly  Jacobson   52            24             94

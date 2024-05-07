@@ -26,5 +26,5 @@ print('Target Vector\n', target[:5])
 #  [0 1 1 1 2]
 
 plt.scatter(features[:, 0], features[:, 1], c=target)
-plt.savefig('example-02-02-3--simulating-data--make_blobs.svg')
+plt.savefig('example-02-02-3--sklearn--simulating-data--make_blobs.svg')
 plt.close()

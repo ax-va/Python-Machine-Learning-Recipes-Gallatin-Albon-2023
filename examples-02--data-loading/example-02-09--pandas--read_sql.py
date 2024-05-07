@@ -24,13 +24,13 @@ conn = pymysql.connect(
     db='db',
 )
 
-dataframe = pd.read_sql("select * from data", conn)
-dataframe.head(2)
+df = pd.read_sql("select * from data", conn)
+df.head(2)
 #    integer            datetime  category
 # 0        5 2015-01-01 00:00:00         0
 # 1        5 2015-01-01 00:00:01         0
 
-dataframe.info()
+df.info()
 # <class 'pandas.core.frame.DataFrame'>
 # RangeIndex: 100 entries, 0 to 99
 # Data columns (total 3 columns):

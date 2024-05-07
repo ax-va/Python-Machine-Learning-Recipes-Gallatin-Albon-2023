@@ -11,7 +11,7 @@ while min-max scaling is often recommended for neural networks.
 See also a z-score in statistics.
 """
 import numpy as np
-from sklearn import preprocessing
+from sklearn.preprocessing import StandardScaler, RobustScaler
 
 # Create vector
 x = np.array([[-1000.1],
@@ -26,7 +26,7 @@ x = np.array([[-1000.1],
 #        [ 9000.9]])
 
 # Create scaler
-scaler = preprocessing.StandardScaler()
+scaler = StandardScaler()
 
 # Transform vector
 x_standardized = scaler.fit_transform(x)
@@ -44,7 +44,7 @@ print("Standard deviation:", x_standardized.std())
 # Standard deviation: 1.0
 
 # If data has significant outliers, RobustScaler is recommended
-robust_scaler = preprocessing.RobustScaler()
+robust_scaler = RobustScaler()
 
 # Transform features
 robust_scaler.fit_transform(x)

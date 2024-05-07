@@ -3,12 +3,12 @@ import pandas as pd
 url = 'https://raw.githubusercontent.com/chrisalbon/sim_data/master/data.csv'
 
 # Load dataset
-dataframe = pd.read_csv(url)
-dataframe.head(2)
+df = pd.read_csv(url)
+df.head(2)
 #    integer             datetime  category
 # 0        5  2015-01-01 00:00:00         0
 # 1        5  2015-01-01 00:00:01         0
-dataframe.info()
+df.info()
 # <class 'pandas.core.frame.DataFrame'>
 # RangeIndex: 100 entries, 0 to 99
 # Data columns (total 3 columns):
@@ -20,11 +20,11 @@ dataframe.info()
 # dtypes: int64(2), object(1)
 # memory usage: 2.5+ KB
 
-dataframe = pd.read_csv(url, parse_dates=["datetime"])
+df = pd.read_csv(url, parse_dates=["datetime"])
 #    integer            datetime  category
 # 0        5 2015-01-01 00:00:00         0
 # 1        5 2015-01-01 00:00:01         0
-dataframe.info()
+df.info()
 # <class 'pandas.core.frame.DataFrame'>
 # RangeIndex: 100 entries, 0 to 99
 # Data columns (total 3 columns):
