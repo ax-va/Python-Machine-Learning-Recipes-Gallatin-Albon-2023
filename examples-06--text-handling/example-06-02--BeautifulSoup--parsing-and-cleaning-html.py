@@ -1,7 +1,7 @@
 """
 Extract just the text from text data with HTML elements.
 """
-from bs4 import BeautifulSoup  # lxml also installed
+from bs4 import BeautifulSoup  # lxml needed
 
 HTML = (
     "<div class='full_name'>"

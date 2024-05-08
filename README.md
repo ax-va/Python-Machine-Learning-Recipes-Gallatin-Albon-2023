@@ -60,3 +60,16 @@ https://spacy.io/usage/linguistic-features#named-entities
 
 ## Kaggle: Bag of Words Meets Bags of Popcorn
 https://www.kaggle.com/c/word2vec-nlp-tutorial
+
+## Scikit-Learn: Tf–idf term weighting
+https://scikit-learn.org/stable/modules/feature_extraction.html#tfidf-term-weighting
+
+## Cosine similarities
+https://www.geeksforgeeks.org/cosine-similarity/
+
+## Nvidia gave me a $15K Data Science Workstation — here’s what I did with it
+https://towardsdatascience.com/nvidia-gave-me-a-15k-data-science-workstation-heres-what-i-did-with-it-70cfb069fc35
+
+
+## NLP with transformers
+https://huggingface.co/docs/transformers/quicktour
