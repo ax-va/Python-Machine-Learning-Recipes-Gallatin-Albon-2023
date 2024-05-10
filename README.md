@@ -70,6 +70,8 @@ https://www.geeksforgeeks.org/cosine-similarity/
 ## Nvidia gave me a $15K Data Science Workstation — here’s what I did with it
 https://towardsdatascience.com/nvidia-gave-me-a-15k-data-science-workstation-heres-what-i-did-with-it-70cfb069fc35
 
-
 ## NLP with transformers
 https://huggingface.co/docs/transformers/quicktour
+
+## Python strftime cheatsheet
+https://strftime.org/

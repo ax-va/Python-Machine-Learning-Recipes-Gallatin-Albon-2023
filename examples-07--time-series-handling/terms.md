@@ -1,0 +1,1 @@
+Longitudinal data (or time series data) = data collected repeatedly for the same variables over points in time
