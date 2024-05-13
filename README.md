@@ -1,4 +1,4 @@
-# Python-ML-Recipes-Gallatin-Albon-2023
+# Python-Machine-Learning-Recipes-Gallatin-Albon-2023
 
 ## SciPy: Sparse matrices (scipy.sparse)
 
