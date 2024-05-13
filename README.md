@@ -75,3 +75,9 @@ https://huggingface.co/docs/transformers/quicktour
 
 ## Python strftime cheatsheet
 https://strftime.org/
+
+## Pandas: Time deltas
+https://pandas.pydata.org/pandas-docs/stable/user_guide/timedeltas.html
+
+## Pandas: Time series / date functionality
+https://pandas.pydata.org/docs/user_guide/timeseries.html
