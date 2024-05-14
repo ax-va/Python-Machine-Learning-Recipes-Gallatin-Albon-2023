@@ -81,3 +81,9 @@ https://pandas.pydata.org/pandas-docs/stable/user_guide/timedeltas.html
 
 ## Pandas: Time series / date functionality
 https://pandas.pydata.org/docs/user_guide/timeseries.html
+
+## Pandas: pandas.DataFrame.rolling
+https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.rolling.html
+
+## What are Moving Average or Smoothing Techniques?
+https://www.itl.nist.gov/div898/handbook/pmc/section4/pmc42.htm
