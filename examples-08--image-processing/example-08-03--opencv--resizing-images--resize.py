@@ -8,7 +8,7 @@ image.shape
 # (2270, 3600)
 
 # Resize image
-image_smaller = cv2.resize(image, (3600//10, 2270//10))
+image_smaller = cv2.resize(image, (3600 // 10, 2270 // 10))
 image_smaller.shape
 # (227, 360)
 
@@ -16,7 +16,7 @@ image_smaller.shape
 plt.imshow(image_smaller, cmap="gray"), plt.axis("off")
 plt.show()
 
-image_larger = cv2.resize(image, (3600*2, 2270*2))
+image_larger = cv2.resize(image, (3600 * 2, 2270 * 2))
 image_larger.shape
 # (4540, 7200)
 plt.imshow(image_larger, cmap="gray"), plt.axis("off")
