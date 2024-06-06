@@ -12,7 +12,7 @@ image_smaller = cv2.resize(image, (3600 // 10, 2270 // 10))
 image_smaller.shape
 # (227, 360)
 
-# View image
+# # View image
 # plt.imshow(image_smaller, cmap="gray"), plt.axis("off")
 # plt.show()
 
@@ -22,6 +22,7 @@ image_larger = cv2.resize(image, (3600 * 2, 2270 * 2))
 image_larger.shape
 # (4540, 7200)
 
+# # View image
 # plt.imshow(image_larger, cmap="gray"), plt.axis("off")
 # plt.show()
 
