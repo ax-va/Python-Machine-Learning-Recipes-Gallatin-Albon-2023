@@ -72,10 +72,21 @@ image_rgb = cv2.cvtColor(image_bgr_masked, cv2.COLOR_BGR2RGB)
 #         [ 93, 154, 208]],
 # ...
 
-# Show image
-plt.imshow(image_rgb), plt.axis("off")
-plt.show()
+# # Show image
+# plt.imshow(image_rgb), plt.axis("off")
+# plt.show()
 
-# Show image and keep only the white areas
-plt.imshow(mask, cmap='gray'), plt.axis("off")
-plt.show()
+cv2.imwrite(
+    'example-08-08--opencv--isolating-colors--cvtColor--inRange--bitwise_and-1.jpg',
+    cv2.cvtColor(image_rgb, cv2.COLOR_RGB2BGR)
+)
+
+
+# # Show image and keep only the white areas
+# plt.imshow(mask, cmap='gray'), plt.axis("off")
+# plt.show()
+
+cv2.imwrite(
+    'example-08-08--opencv--isolating-colors--cvtColor--inRange--bitwise_and-2.jpg',
+    mask,
+)

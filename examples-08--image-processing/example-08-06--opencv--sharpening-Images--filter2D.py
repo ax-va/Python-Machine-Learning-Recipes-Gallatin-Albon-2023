@@ -21,6 +21,8 @@ kernel = np.array(
 # Sharpen image
 image_sharp = cv2.filter2D(image, -1, kernel)
 
-# Show image
-plt.imshow(image_sharp, cmap="gray"), plt.axis("off")
-plt.show()
+# # Show image
+# plt.imshow(image_sharp, cmap="gray"), plt.axis("off")
+# plt.show()
+
+cv2.imwrite('example-08-06--opencv--sharpening-Images--filter2D-1.jpg', image_sharp)
