@@ -24,12 +24,13 @@ max_output_value = 255  # the maximum intensity of the output pixel intensities
 neighborhood_size = 99  # the size of the neighborhood used to determine a pixel's threshold
 subtract_from_mean = 10  # a constant subtracted from the calculated threshold -> fine-tuning
 
-# Apply cv2.ADAPTIVE_THRESH_GAUSSIAN_C
+# Apply cv2.ADAPTIVE_THRESH_GAUSSIAN_C:
+# pixel's threshold to be a weighted sum of the neighboring pixel intensities
+# ->
+# weights determined by a Gaussian window
 image_gaussian_threshold = cv2.adaptiveThreshold(
     image_grey,
     max_output_value,
-    # pixel's threshold to be a weighted sum of the neighboring pixel intensities
-    # -> weights determined by a Gaussian window
     cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
     cv2.THRESH_BINARY,
     neighborhood_size,
@@ -42,7 +43,8 @@ image_gaussian_threshold = cv2.adaptiveThreshold(
 
 cv2.imwrite('example-08-09--opencv--binarizing-images--adaptiveThreshold-1.jpg', image_gaussian_threshold)
 
-# Apply cv2.ADAPTIVE_THRESH_MEAN_C
+# Apply cv2.ADAPTIVE_THRESH_MEAN_C:
+# the mean of the neighboring pixels
 image_mean_threshold = cv2.adaptiveThreshold(
     image_grey,
     max_output_value,
