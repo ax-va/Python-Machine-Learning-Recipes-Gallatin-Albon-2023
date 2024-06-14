@@ -55,7 +55,7 @@ cv2.grabCut(
     rectangle,
     bgdModel,  # temporary array for background
     fgdModel,  # temporary array for foreground
-5,  # number of iterations
+    5,  # number of iterations
     cv2.GC_INIT_WITH_RECT,  # Initiative with rectangle
 )
 #  array([[ 3.58154888e-01,  8.87617088e-02,  3.07697254e-01,
@@ -117,6 +117,8 @@ new_mask = np.where((mask == 0) | (mask == 2), 0, 1).astype('uint8')
 #        [0, 0, 0, ..., 0, 0, 0]], dtype=uint8)
 new_mask.shape
 # (256, 256)
+np.unique(new_mask)
+# array([0, 1], dtype=uint8)
 
 # Show mask
 plt.imshow(mask, cmap='gray'), plt.axis("off")
@@ -127,8 +129,8 @@ plt.show()
 
 mask_mapped = np.zeros(mask.shape, np.uint8)
 mask_mapped[mask == 0] = 0  # black
-mask_mapped[mask == 3] = 255  # white
 mask_mapped[mask == 2] = 127  # gray
+mask_mapped[mask == 3] = 255  # white
 cv2.imwrite(
     'exmple-08-10--removing-backgrounds--grabCut-1.jpg',
     mask_mapped,
