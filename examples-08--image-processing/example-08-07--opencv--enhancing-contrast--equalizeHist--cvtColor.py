@@ -23,11 +23,14 @@ image = cv2.imread("../images/plane_256x256.jpg", cv2.IMREAD_GRAYSCALE)
 # Enhance image
 image_enhanced = cv2.equalizeHist(image)
 
-# # Show image
-# plt.imshow(image_enhanced, cmap="gray"), plt.axis("off")
-# plt.show()
+# Show image
+plt.imshow(image_enhanced, cmap="gray"), plt.axis("off")
+plt.show()
 
-cv2.imwrite('example-08-07--opencv--enhancing-contrast--equalizeHist--cvtColor-1.jpg', image_enhanced)
+cv2.imwrite(
+    'example-08-07--opencv--enhancing-contrast--equalizeHist--cvtColor-1.jpg',
+    image_enhanced,
+)
 
 # color
 image_bgr = cv2.imread("../images/plane.jpg")
@@ -41,12 +44,12 @@ image_yuv[:, :, 0] = cv2.equalizeHist(image_yuv[:, :, 0])
 # Convert to RGB
 image_rgb = cv2.cvtColor(image_yuv, cv2.COLOR_YUV2RGB)
 
-# # Show image
-# plt.imshow(image_rgb), plt.axis("off")
-# plt.show()
+# Show image
+plt.imshow(image_rgb), plt.axis("off")
+plt.show()
 
 # Transform RGB to BGR and save the color image
 cv2.imwrite(
     'example-08-07--opencv--enhancing-contrast--equalizeHist--cvtColor-2.jpg',
-    cv2.cvtColor(image_rgb, cv2.COLOR_RGB2BGR)
+    cv2.cvtColor(image_rgb, cv2.COLOR_RGB2BGR),
 )

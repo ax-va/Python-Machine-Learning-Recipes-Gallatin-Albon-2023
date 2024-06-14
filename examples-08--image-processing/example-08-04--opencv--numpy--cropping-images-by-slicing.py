@@ -14,7 +14,10 @@ image_cropped = image[:, :128]
 image_cropped.shape
 # (256, 128)
 
-# # Show image
-# plt.imshow(image_cropped, cmap="gray"), plt.axis("off"), plt.show()
+# Show image
+plt.imshow(image_cropped, cmap="gray"), plt.axis("off"), plt.show()
 
-cv2.imwrite('example-08-04--opencv--numpy--cropping-images-by-slicing-1.jpg', image_cropped)
+cv2.imwrite(
+    'example-08-04--opencv--numpy--cropping-images-by-slicing-1.jpg',
+    image_cropped,
+)

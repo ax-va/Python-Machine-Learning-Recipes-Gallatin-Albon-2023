@@ -93,3 +93,6 @@ https://lifearoundkaur.wordpress.com/2015/08/04/difference-between-rgb-and-bgr/
 
 ## The Pillow library offers many options for resizing images for this reason
 https://pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.Image.resize
+
+## Grab Cut
+https://grabcut.weebly.com/background--algorithm.html

@@ -1,13 +1,9 @@
 """
 Binarize = convert a greyscale image to its black and white form.
-
 ->
-
 Adaptive thresholding = the threshold value for a pixel
 is determined by the pixel intensities of its neighbors.
-
 ->
-
 denoising an image = keeping only the most important elements
 
 For example, thresholding is applied to photos
@@ -37,11 +33,14 @@ image_gaussian_threshold = cv2.adaptiveThreshold(
     subtract_from_mean,
 )
 
-# # Show image
-# plt.imshow(image_gaussian_threshold, cmap="gray"), plt.axis("off")
-# plt.show()
+# Show image
+plt.imshow(image_gaussian_threshold, cmap="gray"), plt.axis("off")
+plt.show()
 
-cv2.imwrite('example-08-09--opencv--binarizing-images--adaptiveThreshold-1.jpg', image_gaussian_threshold)
+cv2.imwrite(
+    'example-08-09--opencv--binarizing-images--adaptiveThreshold-1.jpg',
+    image_gaussian_threshold,
+)
 
 # Apply cv2.ADAPTIVE_THRESH_MEAN_C:
 # the mean of the neighboring pixels
@@ -54,8 +53,11 @@ image_mean_threshold = cv2.adaptiveThreshold(
     subtract_from_mean,
 )
 
-# # Show image
-# plt.imshow(image_mean_threshold, cmap="gray"), plt.axis("off")
-# plt.show()
+# Show image
+plt.imshow(image_mean_threshold, cmap="gray"), plt.axis("off")
+plt.show()
 
-cv2.imwrite('example-08-09--opencv--binarizing-images--adaptiveThreshold-2.jpg', image_mean_threshold)
+cv2.imwrite(
+    'example-08-09--opencv--binarizing-images--adaptiveThreshold-2.jpg',
+    image_mean_threshold,
+)
