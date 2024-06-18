@@ -132,7 +132,7 @@ mask_mapped[mask == 0] = 0  # black
 mask_mapped[mask == 2] = 127  # gray
 mask_mapped[mask == 3] = 255  # white
 cv2.imwrite(
-    'exmple-08-10--removing-backgrounds--grabCut-1.jpg',
+    'example-08-10--opencv--removing-backgrounds--grabCut-1.jpg',
     mask_mapped,
 )
 
@@ -141,7 +141,7 @@ plt.imshow(new_mask, cmap='gray'), plt.axis("off")
 plt.show()
 
 cv2.imwrite(
-    'exmple-08-10--removing-backgrounds--grabCut-2.jpg',
+    'example-08-10--opencv--removing-backgrounds--grabCut-2.jpg',
     new_mask * 255,
 )
 # 0 * 255 = 0 (black)
@@ -166,6 +166,6 @@ plt.imshow(image_rgb_nobg), plt.axis("off")
 plt.show()
 
 cv2.imwrite(
-    'exmple-08-10--removing-backgrounds--grabCut-3.jpg',
+    'example-08-10--opencv--removing-backgrounds--grabCut-3.jpg',
     cv2.cvtColor(image_rgb_nobg, cv2.COLOR_RGB2BGR),
 )
