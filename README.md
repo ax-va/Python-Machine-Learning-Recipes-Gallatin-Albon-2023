@@ -97,8 +97,8 @@ https://pillow.readthedocs.io/en/stable/reference/Image.html#PIL.Image.Image.res
 ## Grab Cut
 https://grabcut.weebly.com/background--algorithm.html
 
-## OpenCV's cornerHarris
+## OpenCV: cornerHarris
 https://docs.opencv.org/2.4/modules/imgproc/doc/feature_detection.html?highlight=goodfeaturestotrack#cornerharris
 
-## OpenCV's goodFeaturesToTrack
+## OpenCV: goodFeaturesToTrack
 https://docs.opencv.org/2.4/modules/imgproc/doc/feature_detection.html#goodfeaturestotrack
