@@ -7,9 +7,6 @@ The Canny detector requires two parameters denoting low and high gradient thresh
 - pixels between the low and high thresholds -> weak edge pixels.
 - pixels above the high threshold -> strong edge pixels.
 
-See also:
-https://oreil.ly/YvjM5
-
 Other edge detection techniques: Sobel filters, Laplacian edge detector, etc.
 """
 import cv2
