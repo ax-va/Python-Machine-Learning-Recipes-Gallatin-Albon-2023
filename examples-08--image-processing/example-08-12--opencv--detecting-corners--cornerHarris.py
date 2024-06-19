@@ -70,8 +70,6 @@ cv2.imwrite(
     minmax_scaler.fit_transform(detector_responses.flatten()[:, np.newaxis]).reshape(detector_responses.shape),
 )
 
-# Cannot correct make a picture from the detector_responses data
-
 # # # 2. Shi-Tomasi (goodFeaturesToTrack)
 
 image_bgr = cv2.imread('../images/plane_256x256.jpg')
