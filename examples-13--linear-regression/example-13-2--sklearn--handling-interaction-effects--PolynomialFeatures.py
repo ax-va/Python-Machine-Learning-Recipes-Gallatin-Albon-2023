@@ -68,7 +68,7 @@ interaction_term.shape
 interaction_term[0]
 # 0.037340501965846186
 
-# Use linear regression with interaction terms
+# Use the linear regression with interaction terms
 regression = LinearRegression()
 # Fit the linear regression
 model = regression.fit(features_interaction, target)
