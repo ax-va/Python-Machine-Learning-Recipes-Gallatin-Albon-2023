@@ -48,15 +48,6 @@ features_interaction[0]
 # array([0.0465673 , 0.80186103, 0.0373405 ])
 # 0.0465673 *  0.80186103 = 0.037340503142319
 
-# another example
-other_features = np.array([[2, 3],
-                           [2, 3],
-                           [2, 3]])
-other_features_interaction = interaction.fit_transform(other_features)
-# array([[2., 3., 6.],
-#        [2., 3., 6.],
-#        [2., 3., 6.]])
-
 # Here, we have
 # x_1, x_2, x1 * x2
 
@@ -68,7 +59,7 @@ interaction_term.shape
 interaction_term[0]
 # 0.037340501965846186
 
-# Use the linear regression with interaction terms
+# Create linear regression
 regression = LinearRegression()
-# Fit the linear regression
+# Fit the linear regression with interaction terms
 model = regression.fit(features_interaction, target)
