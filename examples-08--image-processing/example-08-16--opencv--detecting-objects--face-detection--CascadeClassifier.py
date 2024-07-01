@@ -19,7 +19,7 @@ face_cascade.load(
     )
 )
 
-# images with faces to test the face detecting
+# images with faces to test the face detection
 filenames = [
     "../images/faces/johnny.png",
     "../images/faces/johnny_and_orlando.png",
@@ -47,5 +47,5 @@ for i in range(len(filenames)):
     plt.subplot(1, 1, 1)
     plt.imshow(image_rgb)
     # plt.show()
-    plt.savefig(f'example-08-16--opencv--detecting-objects--face-detecting--CascadeClassifier-{i+1}.png')
+    plt.savefig(f'example-08-16--opencv--detecting-objects--face-detection--CascadeClassifier-{i+1}.png')
     plt.close()
