@@ -26,6 +26,10 @@ filenames = [
     "../images/faces/leo_and_kate.png",
     "../images/faces/leo_and_johnny.png",
     "../images/faces/kate.png",
+    "../images/faces/leo.png",
+    "../images/faces/critter.png",
+    "../images/faces/freddy.png",
+    "../images/faces/orlando.png",
 ]
 
 for i in range(len(filenames)):
