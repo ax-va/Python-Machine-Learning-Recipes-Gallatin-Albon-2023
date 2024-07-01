@@ -1,7 +1,7 @@
 """
 Detect objects in images using pretrained cascade classifiers with OpenCV.
 ->
-Download Haar cascade classifiers for OpenCV:
+Download models of Haar cascade classifiers for OpenCV:
 https://github.com/opencv/opencv/tree/4.x/data/haarcascades
 
 See also:
@@ -10,9 +10,14 @@ https://docs.opencv.org/4.x/db/d28/tutorial_cascade_classifier.html
 """
 import cv2
 from matplotlib import pyplot as plt
+from utils.image_processing import load_image  # my module
 
 face_cascade = cv2.CascadeClassifier()
-face_cascade.load(cv2.samples.findFile("models/haarcascade_frontalface_default.xml"))
+face_cascade.load(
+    cv2.samples.findFile(
+        "models/haarcascade_frontalface_default.xml"
+    )
+)
 
 # images with faces to test the face detecting
 filenames = [
@@ -25,8 +30,7 @@ filenames = [
 
 for i in range(len(filenames)):
     # Load image
-    image_bgr = cv2.imread(filenames[i], cv2.IMREAD_COLOR)
-    image_rgb = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2RGB)
+    image_rgb = load_image(filenames[i])
 
     # Detect faces and draw a rectangle
     faces = face_cascade.detectMultiScale(image_rgb)
