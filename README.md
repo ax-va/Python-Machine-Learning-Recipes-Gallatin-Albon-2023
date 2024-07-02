@@ -103,5 +103,17 @@ https://docs.opencv.org/2.4/modules/imgproc/doc/feature_detection.html?highlight
 ## OpenCV: goodFeaturesToTrack
 https://docs.opencv.org/2.4/modules/imgproc/doc/feature_detection.html#goodfeaturestotrack
 
-## Models and pretrained weights
+## Pandas: pandas.DataFrame.hist
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.hist.html
+
+## OpenCV: Histograms - 1 : Find, Plot, Analyze !!!
+https://docs.opencv.org/3.2.0/d1/db7/tutorial_py_histogram_begins.html
+
+## PyTorch: Transfer Learning for Computer Vision Tutorial
+https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html#sphx-glr-beginner-transfer-learning-tutorial-py
+
+## TensorFlow: TensorFlow Hub is a repository of trained machine learning models
+https://www.tensorflow.org/hub
+
+## PyTorch: Models and pretrained weights
 https://pytorch.org/vision/stable/models.html

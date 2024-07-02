@@ -9,9 +9,7 @@ See also:
 - Models and pretrained weights
 https://pytorch.org/vision/stable/models.html
 """
-import cv2
 import json
-import numpy as np
 import torch
 from torchvision import transforms
 from torchvision.models import resnet18, ResNet18_Weights
