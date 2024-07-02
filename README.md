@@ -102,3 +102,6 @@ https://docs.opencv.org/2.4/modules/imgproc/doc/feature_detection.html?highlight
 
 ## OpenCV: goodFeaturesToTrack
 https://docs.opencv.org/2.4/modules/imgproc/doc/feature_detection.html#goodfeaturestotrack
+
+## Models and pretrained weights
+https://pytorch.org/vision/stable/models.html

@@ -14,6 +14,8 @@ as a good start for a model to train to recognize dogs.
 Leverage the information learned from other datasets and model
 architectures without the overhead of training a model from scratch.
 
+ResNet18 is a pretrained model, an 18-layers NN that was trained on the ImageNet dataset.
+
 See also:
 - Transfer Learning for Computer Vision Tutorial
 https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html#sphx-glr-beginner-transfer-learning-tutorial-py
