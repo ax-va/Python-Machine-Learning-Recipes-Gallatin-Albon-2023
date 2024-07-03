@@ -117,3 +117,6 @@ https://www.tensorflow.org/hub
 
 ## PyTorch: Models and pretrained weights
 https://pytorch.org/vision/stable/models.html
+
+## Scikit-Learn: PCA
+https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html
