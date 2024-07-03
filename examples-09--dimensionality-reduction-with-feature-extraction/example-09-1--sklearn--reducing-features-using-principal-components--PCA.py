@@ -8,7 +8,7 @@ PCA works well if the data is linearly separable.
 Different classes can be separated by line or (hyper)plane.
 
 See also:
-Scikit-Learn-PCA
+- Scikit-Learn-PCA
 https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html
 """
 from sklearn.preprocessing import StandardScaler

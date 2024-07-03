@@ -11,10 +11,10 @@ One downside of kernel PCA is specifying a number of components, no variance,
 and its own hyperparameters like gamma for RBF.
 
 See also:
-Scikit-Learn: KernelPCA
+- Scikit-Learn: KernelPCA
 https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.KernelPCA.html
 
-Sebastian Raschka: Kernel tricks and nonlinear dimensionality reduction via RBF kernel PCA
+- Sebastian Raschka: Kernel tricks and nonlinear dimensionality reduction via RBF kernel PCA
 https://sebastianraschka.com/Articles/2014_kernel_pca.html
 """
 from sklearn.decomposition import KernelPCA
