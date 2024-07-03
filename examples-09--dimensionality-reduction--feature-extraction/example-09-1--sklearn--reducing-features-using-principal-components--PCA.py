@@ -64,7 +64,7 @@ pca = PCA(
 # Conduct PCA
 features_pca = pca.fit_transform(features)
 
-# Show results
+# Print results
 print("Original number of features:", features.shape[1])
 # Original number of features: 64
 print("Reduced number of features:", features_pca.shape[1])
