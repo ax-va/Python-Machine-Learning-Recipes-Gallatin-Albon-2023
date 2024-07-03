@@ -26,6 +26,6 @@ plt.imshow(image_sharp, cmap="gray"), plt.axis("off")
 plt.show()
 
 cv2.imwrite(
-    'example-08-06--opencv--sharpening-Images--filter2D-1.jpg',
+    'example-08-06--opencv--sharpening-Images--filter2D.jpg',
     image_sharp,
 )

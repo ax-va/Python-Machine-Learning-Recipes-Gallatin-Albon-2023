@@ -41,7 +41,7 @@ for i, channel in enumerate(["r", "g", "b"]):  # 0 = red, 1 = green, 2 = blue
 # Show plot
 # plt.show()
 
-plt.savefig('example-08-14--encoding-color-histograms-as-features--opencv--calcHist--numpy--flatten-1.svg')
+plt.savefig('example-08-14--encoding-color-histograms-as-features--opencv--calcHist--numpy--flatten.svg')
 plt.close()
 
 

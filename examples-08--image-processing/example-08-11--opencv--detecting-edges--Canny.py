@@ -33,6 +33,6 @@ plt.imshow(image_canny, cmap="gray"), plt.axis("off")
 plt.show()
 
 cv2.imwrite(
-    'example-08-11--opencv--detecting-edges--Canny-1.jpg',
+    'example-08-11--opencv--detecting-edges--Canny.jpg',
     image_canny,
 )

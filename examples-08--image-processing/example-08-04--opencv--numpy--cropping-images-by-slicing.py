@@ -18,6 +18,6 @@ image_cropped.shape
 plt.imshow(image_cropped, cmap="gray"), plt.axis("off"), plt.show()
 
 cv2.imwrite(
-    'example-08-04--opencv--numpy--cropping-images-by-slicing-1.jpg',
+    'example-08-04--opencv--numpy--cropping-images-by-slicing.jpg',
     image_cropped,
 )
