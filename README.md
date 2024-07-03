@@ -120,3 +120,9 @@ https://pytorch.org/vision/stable/models.html
 
 ## Scikit-Learn: PCA
 https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html
+
+## Scikit-Learn: KernelPCA
+https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.KernelPCA.html
+
+## Sebastian Raschka: Kernel tricks and nonlinear dimensionality reduction via RBF kernel PCA
+https://sebastianraschka.com/Articles/2014_kernel_pca.html
