@@ -44,7 +44,6 @@ for i, channel in enumerate(["r", "g", "b"]):  # 0 = red, 1 = green, 2 = blue
 plt.savefig('example-08-14--encoding-color-histograms-as-features--opencv--calcHist--numpy--flatten.svg')
 plt.close()
 
-
 # Create a vector for an observation's feature values
 observation = np.array(features).flatten()
 
