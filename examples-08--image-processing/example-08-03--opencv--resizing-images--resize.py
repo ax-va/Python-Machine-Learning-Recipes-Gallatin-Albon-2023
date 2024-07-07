@@ -21,7 +21,7 @@ plt.imshow(image_smaller, cmap="gray"), plt.axis("off")
 plt.show()
 
 cv2.imwrite(
-    'example-08-03--opencv--resizing-images--resize-1.jpg',
+    'example-08-03-1--opencv--resizing-images--resize.jpg',
     image_smaller,
 )
 
@@ -34,6 +34,6 @@ plt.imshow(image_larger, cmap="gray"), plt.axis("off")
 plt.show()
 
 cv2.imwrite(
-    'example-08-03--opencv--resizing-images--resize-2.jpg',
+    'example-08-03-2--opencv--resizing-images--resize.jpg',
     image_larger,
 )

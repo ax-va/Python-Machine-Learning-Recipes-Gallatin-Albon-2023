@@ -77,7 +77,7 @@ plt.imshow(image_rgb), plt.axis("off")
 plt.show()
 
 cv2.imwrite(
-    'example-08-08--opencv--isolating-colors--cvtColor--inRange--bitwise_and-1.jpg',
+    'example-08-08-1--opencv--isolating-colors--cvtColor--inRange--bitwise_and.jpg',
     cv2.cvtColor(image_rgb, cv2.COLOR_RGB2BGR)
 )
 
@@ -87,6 +87,6 @@ plt.imshow(mask, cmap='gray'), plt.axis("off")
 plt.show()
 
 cv2.imwrite(
-    'example-08-08--opencv--isolating-colors--cvtColor--inRange--bitwise_and-2.jpg',
+    'example-08-08-2--opencv--isolating-colors--cvtColor--inRange--bitwise_and.jpg',
     mask,
 )

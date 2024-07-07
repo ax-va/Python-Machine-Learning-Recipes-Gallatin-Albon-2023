@@ -51,5 +51,5 @@ for i in range(len(filenames)):
     plt.subplot(1, 1, 1)
     plt.imshow(image_rgb)
     # plt.show()
-    plt.savefig(f'example-08-16--opencv--detecting-objects--face-detection--CascadeClassifier-{i+1}.png')
+    plt.savefig(f'example-08-16-{i+1}--opencv--detecting-objects--face-detection--CascadeClassifier.png')
     plt.close()

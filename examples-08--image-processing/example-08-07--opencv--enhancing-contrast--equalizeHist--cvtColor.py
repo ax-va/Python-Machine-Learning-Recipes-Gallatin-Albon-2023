@@ -28,7 +28,7 @@ plt.imshow(image_enhanced, cmap="gray"), plt.axis("off")
 plt.show()
 
 cv2.imwrite(
-    'example-08-07--opencv--enhancing-contrast--equalizeHist--cvtColor-1.jpg',
+    'example-08-07-1--opencv--enhancing-contrast--equalizeHist--cvtColor.jpg',
     image_enhanced,
 )
 
@@ -50,6 +50,6 @@ plt.show()
 
 # Transform RGB to BGR and save the color image
 cv2.imwrite(
-    'example-08-07--opencv--enhancing-contrast--equalizeHist--cvtColor-2.jpg',
+    'example-08-07-2--opencv--enhancing-contrast--equalizeHist--cvtColor.jpg',
     cv2.cvtColor(image_rgb, cv2.COLOR_RGB2BGR),
 )

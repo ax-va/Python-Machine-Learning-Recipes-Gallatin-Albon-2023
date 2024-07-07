@@ -24,7 +24,7 @@ plt.imshow(image_blurry, cmap="gray"), plt.axis("off")
 plt.show()
 
 cv2.imwrite(
-    'example-08-05--opencv--blurring-images--blur--filter2D-1.jpg',
+    'example-08-05-1--opencv--blurring-images--blur--filter2D.jpg',
     image_blurry,
 )
 
@@ -36,7 +36,7 @@ plt.imshow(image_very_blurry, cmap="gray"), plt.xticks([]), plt.yticks([])
 plt.show()
 
 cv2.imwrite(
-    'example-08-05--opencv--blurring-images--blur--filter2D-2.jpg',
+    'example-08-05-2--opencv--blurring-images--blur--filter2D.jpg',
     image_very_blurry,
 )
 
@@ -56,6 +56,6 @@ plt.imshow(image_kernel, cmap="gray"), plt.xticks([]), plt.yticks([])
 plt.show()
 
 cv2.imwrite(
-    'example-08-05--opencv--blurring-images--blur--filter2D-3.jpg',
+    'example-08-05-3--opencv--blurring-images--blur--filter2D.jpg',
     image_kernel,
 )

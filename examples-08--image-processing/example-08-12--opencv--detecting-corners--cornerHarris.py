@@ -54,7 +54,7 @@ plt.imshow(image_gray, cmap="gray"), plt.axis("off")
 plt.show()
 
 cv2.imwrite(
-    'example-08-12--opencv--detecting-corners--cornerHarris-1.jpg',
+    'example-08-12-1--opencv--detecting-corners--cornerHarris.jpg',
     image_gray,
 )
 
@@ -66,7 +66,7 @@ plt.show()
 minmax_scaler = MinMaxScaler(feature_range=(0, 255))
 
 cv2.imwrite(
-    'example-08-12--opencv--detecting-corners--cornerHarris-2.jpg',
+    'example-08-12-2--opencv--detecting-corners--cornerHarris.jpg',
     minmax_scaler.fit_transform(detector_responses.flatten()[:, np.newaxis]).reshape(detector_responses.shape),
 )
 
@@ -100,6 +100,6 @@ plt.imshow(image_gray, cmap='gray'), plt.axis("off")
 plt.show()
 
 cv2.imwrite(
-    'example-08-12--opencv--detecting-corners--cornerHarris-3.jpg',
+    'example-08-12-3--opencv--detecting-corners--cornerHarris.jpg',
     image_gray,
 )

@@ -38,7 +38,7 @@ plt.imshow(image_gaussian_threshold, cmap="gray"), plt.axis("off")
 plt.show()
 
 cv2.imwrite(
-    'example-08-09--opencv--binarizing-images--adaptiveThreshold-1.jpg',
+    'example-08-09-1--opencv--binarizing-images--adaptiveThreshold.jpg',
     image_gaussian_threshold,
 )
 
@@ -58,6 +58,6 @@ plt.imshow(image_mean_threshold, cmap="gray"), plt.axis("off")
 plt.show()
 
 cv2.imwrite(
-    'example-08-09--opencv--binarizing-images--adaptiveThreshold-2.jpg',
+    'example-08-09-2--opencv--binarizing-images--adaptiveThreshold.jpg',
     image_mean_threshold,
 )
