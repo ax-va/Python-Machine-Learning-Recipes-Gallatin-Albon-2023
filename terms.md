@@ -8,5 +8,3 @@ Three types of feature selection methods:
 that produces models with the highest quality predictions.
 - *Embedded methods* select the best feature subset as part of, as an extension of,
 a learning algorithm's training process.
-
-In "examples-10", only filter and wrapper methods; embedded methods later.
