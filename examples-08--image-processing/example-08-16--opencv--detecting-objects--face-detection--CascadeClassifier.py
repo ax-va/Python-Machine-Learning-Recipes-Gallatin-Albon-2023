@@ -32,9 +32,9 @@ filenames = [
     "../images/faces/orlando.png",
 ]
 
-for i in range(len(filenames)):
+for i, filename in enumerate(filenames):
     # Load image
-    image_rgb = load_image(filenames[i])
+    image_rgb = load_image(filename)
 
     # Detect faces and draw a rectangle
     faces = face_cascade.detectMultiScale(image_rgb)
