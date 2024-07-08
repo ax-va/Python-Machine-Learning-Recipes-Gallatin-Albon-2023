@@ -54,6 +54,7 @@ features_high_variance[0:3]
 thresholder.fit(features).variances_
 # array([0.68112222, 0.18871289, 3.09550267, 0.57713289])
 
+# Demonstrate the third restriction:
 # 3. If the features have been standardized (to mean zero and unit variance),
 # then for obvious reasons VT will not work correctly.
 
