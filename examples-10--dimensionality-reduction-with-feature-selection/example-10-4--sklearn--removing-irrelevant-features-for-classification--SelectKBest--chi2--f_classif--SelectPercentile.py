@@ -5,7 +5,7 @@ Remove uninformative features in a categorical target vector.
 2. For quantitative features, compute the ANOVA F-value between each feature and the target vector.
 
 1. Chi-squared statistics examine the independence of two
-categorical vectors (here, a feature and the target vector):
+categorical vectors (here, a feature vector and the target vector):
 
 $$\chi^2 = \sum_i (O_i - E_i) / E_i$$,
 
@@ -13,7 +13,7 @@ where $O_i$ is the observed count of the $i$-th combination (<feature_value>, <t
 and $E_i$ is the expected count of that if they were independent.
 
 For example, E_1 = P(<feature_value_1>) * P(<target_value_1>) =
-= <count_of_feature_value_1> / <count_of_all_feature_values> * <count_of_target_value_1> / <count_of_all_target_values>
+(<count_of_feature_value_1> / <count_of_all_feature_values>) * (<count_of_target_value_1> / <count_of_all_target_values>).
 
 2. F-value scores examine if (when we group the numerical feature by the target vector)
 the means for each group are significantly different.
