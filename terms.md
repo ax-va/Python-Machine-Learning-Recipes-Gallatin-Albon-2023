@@ -1,4 +1,4 @@
-*feature matrix* = matrix where rows are features, and each column is observations of a feature 
+*feature matrix* = matrix where rows corresponds to features, and each column is observations of a feature 
 
 *feature extraction* = projecting features to significantly fewer dimensions keeping high-quality models
 
