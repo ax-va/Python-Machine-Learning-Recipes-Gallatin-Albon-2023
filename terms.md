@@ -1,3 +1,5 @@
+*feature matrix* = matrix where rows are features, and each column is observations of a feature 
+
 *feature extraction* = projecting features to significantly fewer dimensions keeping high-quality models
 
 *feature selection* = selecting high-quality, informative features and dropping less useful features

@@ -10,7 +10,7 @@ categorical vectors (here, a feature vector and the target vector):
 $$\chi^2 = \sum_{ij} (O_{ij} - E_{ij}) / E_{ij}$$,
 
 where $O_{ij}$ is the observed count of (<feature_value_i>, <target_value_j>),
-and $E_{ij}$ is the expected count of that if the events were independent, that is,
+and $E_{ij}$ is the expected count of that as if the events were independent, that is,
 $E_{ij} = P(<feature_value_i>, <target_value_j>) = P(<feature_value_i>) * P(<target_value_j>) =
 (<count_of_feature_value_i> / <count_of_all_feature_values>)
 * (<count_of_target_value_j> / <count_of_all_target_values>)$.
