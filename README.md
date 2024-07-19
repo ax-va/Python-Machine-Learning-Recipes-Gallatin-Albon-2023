@@ -132,3 +132,9 @@ https://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_vs_lda.html
 
 ## Sebastian Raschka: Linear Discriminant Analysis
 https://sebastianraschka.com/Articles/2014_python_lda.html
+
+## Why every statistician should know about cross-validation
+https://robjhyndman.com/hyndsight/crossvalidation/
+
+## Scikit-Learn: Cross-Validation Gone Wrong
+https://betatim.github.io/posts/cross-validation-gone-wrong/

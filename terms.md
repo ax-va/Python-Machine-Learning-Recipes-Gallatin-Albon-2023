@@ -10,3 +10,5 @@ Three types of feature selection methods:
 that produces models with the highest quality predictions.
 - *Embedded methods* select the best feature subset as part of, as an extension of,
 a learning algorithm's training process.
+
+*validation* = observations (features and targets) are split into two sets, called the *training set* and the *test set*
