@@ -138,3 +138,6 @@ https://robjhyndman.com/hyndsight/crossvalidation/
 
 ## Scikit-Learn: Cross-Validation Gone Wrong
 https://betatim.github.io/posts/cross-validation-gone-wrong/
+
+## Scikit-Learn: DummyClassifier    
+https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html
