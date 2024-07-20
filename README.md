@@ -141,3 +141,9 @@ https://betatim.github.io/posts/cross-validation-gone-wrong/
 
 ## Scikit-Learn: DummyClassifier    
 https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html
+
+## ROC Curves in Python and R
+https://community.alteryx.com/t5/Data-Science/ROC-Curves-in-Python-and-R/ba-p/138430
+
+## The Area Under an ROC Curve
+https://darwin.unmc.edu/dxtests/roc3.htm

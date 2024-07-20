@@ -35,7 +35,6 @@ for i, channel in enumerate(["r", "g", "b"]):  # 0 = red, 1 = green, 2 = blue
     # appears across all pixels in an image
     plt.plot(histogram, color=channel)
     plt.xlim([0, 256])
-
     features.extend(histogram)
 
 # Show plot
