@@ -95,11 +95,11 @@ false_positive_rate, true_positive_rate, threshold = roc_curve(
 plt.title("Receiver Operating Characteristic (ROC)")
 plt.plot(false_positive_rate, true_positive_rate)
 plt.plot([0, 1], ls="--")
-plt.plot([0, 0], [1, 0], c=".7"), plt.plot([1, 1] , c=".7")
+plt.plot([0, 0], [1, 0], c=".7"), plt.plot([1, 1], c=".7")  # diagonal line
 plt.ylabel("True Positive Rate (TPR)")
 plt.xlabel("False Positive Rate (FPR)")
 # plt.show()
-plt.savefig('example-11-05--sklearn--evaluating-binary-classifier-thresholds--roc_curve.svg')
+plt.savefig('example-11-05--sklearn--evaluating-binary-classifier-thresholds--roc_curve--roc_auc_score.svg')
 plt.close()
 # A classifier that predicts every observation correctly would look like the
 # solid line in the ROC output in the figure, going straight up to the top immediately.
