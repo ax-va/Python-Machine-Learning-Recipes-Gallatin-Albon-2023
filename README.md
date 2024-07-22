@@ -147,3 +147,6 @@ https://community.alteryx.com/t5/Data-Science/ROC-Curves-in-Python-and-R/ba-p/13
 
 ## The Area Under an ROC Curve
 https://darwin.unmc.edu/dxtests/roc3.htm
+
+## Scikit-Learn: confusion_matrix
+https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html
