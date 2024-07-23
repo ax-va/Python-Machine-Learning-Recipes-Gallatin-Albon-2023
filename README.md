@@ -153,3 +153,6 @@ https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matr
 
 ## Sckit-Learn: silhouette_score
 https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html
+
+## Sckit-Learn: make_scorer
+https://scikit-learn.org/stable/modules/generated/sklearn.metrics.make_scorer.html
