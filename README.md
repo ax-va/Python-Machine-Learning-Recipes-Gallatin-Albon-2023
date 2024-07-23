@@ -150,3 +150,6 @@ https://darwin.unmc.edu/dxtests/roc3.htm
 
 ## Scikit-Learn: confusion_matrix
 https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html
+
+## Sckit-Learn: silhouette_score
+https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html
