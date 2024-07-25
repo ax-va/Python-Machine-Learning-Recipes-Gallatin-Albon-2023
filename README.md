@@ -156,3 +156,6 @@ https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_sco
 
 ## Sckit-Learn: make_scorer
 https://scikit-learn.org/stable/modules/generated/sklearn.metrics.make_scorer.html
+
+## Scikit-Learn: Learning curve
+https://scikit-learn.org/stable/modules/learning_curve.html#learning-curve
