@@ -3,8 +3,8 @@ Get a quick description of a classifier’s performance.
 ->
 Use Scikit-Learn's classification_report.
 
-That includes precision, recall, F_1 score, and support that is
-referred to the number of observations in each class in the test data.
+That includes precision, recall, F_1 score, and support
+that is the number of observations in each class in the test data.
 """
 from sklearn import datasets
 from sklearn.linear_model import LogisticRegression
