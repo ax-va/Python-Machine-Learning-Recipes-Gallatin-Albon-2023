@@ -42,5 +42,5 @@ df.info()
 # dtypes: datetime64[ns](1), int64(2)
 # memory usage: 2.5 KB
 
-# read_sql() is a function created for convenience that may call
-# read_sql_query() or read_sql_table() depending on the input we provide
+# read_sql() is a wrapper-function created for convenience that may call
+# either read_sql_query() or read_sql_table() depending on the input we provide.
