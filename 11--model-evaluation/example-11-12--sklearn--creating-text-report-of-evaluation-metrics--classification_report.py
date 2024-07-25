@@ -60,7 +60,7 @@ print(
 
 # "support" means
 for i in range(3):
-    print(target_test[target_test==i].shape[0])
+    print(target_test[target_test == i].shape[0])
 # 13
 # 16
 # 9
