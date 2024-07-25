@@ -159,3 +159,6 @@ https://scikit-learn.org/stable/modules/generated/sklearn.metrics.make_scorer.ht
 
 ## Scikit-Learn: Learning curve
 https://scikit-learn.org/stable/modules/learning_curve.html#learning-curve
+
+## Scikit-Learn: Validation curve
+https://scikit-learn.org/stable/modules/learning_curve.html#validation-curve

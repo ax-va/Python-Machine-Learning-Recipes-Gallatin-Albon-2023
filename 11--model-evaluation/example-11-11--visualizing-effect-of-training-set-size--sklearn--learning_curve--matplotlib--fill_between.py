@@ -92,6 +92,10 @@ test_scores
 train_mean = np.mean(train_scores, axis=1)  # mean in each row: going along axis 1 for each element fixed in axis 0
 train_std = np.std(train_scores, axis=1)  # std in each row: going along axis 1 for each element fixed in axis 0
 
+# Create means and standard deviations of test set scores
+test_mean = np.mean(test_scores, axis=1)  # mean in each row: going along axis 1 for each element fixed in axis 0
+test_std = np.std(test_scores, axis=1)  # std in each row: going along axis 1 for each element fixed in axis 0
+
 # """
 # |-------> axis 1
 # |  1  2
@@ -114,10 +118,6 @@ train_std
 # array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
 #        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
 #        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
-
-# Create means and standard deviations of test set scores
-test_mean = np.mean(test_scores, axis=1)  # mean in each row: going along axis 1 for each element fixed in axis 0
-test_std = np.std(test_scores, axis=1)  # std in each row: going along axis 1 for each element fixed in axis 0
 
 test_mean.shape
 # (50,)
@@ -179,5 +179,5 @@ plt.xlabel("Training Set Size"), plt.ylabel("Accuracy Score"),
 plt.legend(loc="best")
 plt.tight_layout()
 # plt.show()
-plt.savefig('example-11-11--sklearn--visualizing-effect-of-training-set-size--learning_curve.svg')
+plt.savefig('example-11-11--visualizing-effect-of-training-set-size--sklearn--learning_curve--matplotlib--fill_between.svg')
 plt.close()

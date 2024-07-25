@@ -1,6 +1,6 @@
 """
 This example requires you to start a running SQL instance locally
-that mimics a remote server on localhost
+that mimics a remote server on localhost.
 
 See:
 https://github.com/kylegallatin/mysql-db-example
@@ -42,6 +42,6 @@ df.info()
 # dtypes: datetime64[ns](1), int64(2)
 # memory usage: 2.5 KB
 
-# Notice that the difference between read_sql and read_sql_query is as follows:
+# Notice that the difference between read_sql and read_sql_query is following:
 # read_sql is a wrapper-function created for convenience that may call
 # either read_sql_query or read_sql_table depending on the input we provide.
