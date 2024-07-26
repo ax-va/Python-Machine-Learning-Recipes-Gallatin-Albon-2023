@@ -5,7 +5,7 @@ Use Scikit-Learn's RandomizedSearchCV to search over a specific number of random
 of hyperparameter values from user-supplied distributions (e.g., normal, uniform) and specified lists of values.
 
 See also:
-- Scikit Learn:  RandomizedSearchCV
+- Scikit Learn: RandomizedSearchCV
 https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html
 
 - Random Search for Hyper-Parameter Optimization

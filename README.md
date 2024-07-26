@@ -166,7 +166,7 @@ https://scikit-learn.org/stable/modules/learning_curve.html#validation-curve
 ## Scikit-Learn: GridSearchCV
 https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html
 
-## Scikit Learn:  RandomizedSearchCV
+## Scikit Learn: RandomizedSearchCV
 https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html
 
 ## Random Search for Hyper-Parameter Optimization
