@@ -162,3 +162,12 @@ https://scikit-learn.org/stable/modules/learning_curve.html#learning-curve
 
 ## Scikit-Learn: Validation curve
 https://scikit-learn.org/stable/modules/learning_curve.html#validation-curve
+
+## Scikit-Learn: GridSearchCV
+https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html
+
+## Scikit Learn:  RandomizedSearchCV
+https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html
+
+## Random Search for Hyper-Parameter Optimization
+https://www.jmlr.org/papers/volume13/bergstra12a/bergstra12a.pdf
