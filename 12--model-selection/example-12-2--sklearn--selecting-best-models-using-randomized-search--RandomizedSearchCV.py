@@ -41,6 +41,8 @@ uniform(loc=0, scale=4).rvs(10)
 
 # Create hyperparameter options
 hyperparameters = dict(C=C, penalty=penalty)
+# {'C': <scipy.stats._distn_infrastructure.rv_continuous_frozen at 0x71bccb205cd0>,
+#  'penalty': ['l1', 'l2']}
 
 # Create randomized search
 randomized_search = RandomizedSearchCV(
