@@ -16,8 +16,10 @@ np.random.seed(0)
 iris = datasets.load_iris()
 features = iris.data
 target = iris.target
+
 features.shape
 # (150, 4)
+
 target.shape
 # (150,)
 
