@@ -60,8 +60,8 @@ pca = PCA(
     n_components=0.99,
     # Transform the values of each principal component to have zero mean and unit variance
     whiten=True,
-    ## Implement a stochastic algorithm to find the first
-    ## principal components in often significantly less time
+    # # Implement a stochastic algorithm to find the first
+    # # principal components in often significantly less time
     # svd_solver="randomized",
 )
 
