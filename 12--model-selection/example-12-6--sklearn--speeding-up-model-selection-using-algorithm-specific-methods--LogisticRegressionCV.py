@@ -14,6 +14,7 @@ https://scikit-learn.org/stable/modules/grid_search.html#model-specific-cross-va
 """
 from sklearn import linear_model, datasets
 
+# Load data
 iris = datasets.load_iris()
 features = iris.data
 target = iris.target
