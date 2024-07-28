@@ -177,3 +177,9 @@ https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticR
 
 ## Scikit-Learn: Model specific cross-validation
 https://scikit-learn.org/stable/modules/grid_search.html#model-specific-cross-validation
+
+## Decision Tree Learning
+https://www.cs.princeton.edu/courses/archive/spr07/cos424/papers/mitchell-dectrees.pdf
+
+## Scikit-Learn: Decision Tree Regression
+https://scikit-learn.org/stable/auto_examples/tree/plot_tree_regression.html

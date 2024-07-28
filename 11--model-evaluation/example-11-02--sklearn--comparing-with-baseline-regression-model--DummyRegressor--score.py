@@ -4,7 +4,9 @@ Create a simple baseline regression model to comprise with other models.
 Use DummyRegressor to create a simple model to use as a baseline.
 
 R-squared score:
-$R^2 = 1 - \sum_i ({y_true_value}_i - {y_predicted_value}_i) / ({y_true_value}_i - {y_mean})$
+$$
+R^2 = 1 - \sum_i ({y_true_value}_i - {y_predicted_value}_i) / ({y_true_value}_i - {y_mean})
+$$
 
 The closer $R^2$ is to 1, the more of the variance
 in the predicted target vector that is explained by the features.

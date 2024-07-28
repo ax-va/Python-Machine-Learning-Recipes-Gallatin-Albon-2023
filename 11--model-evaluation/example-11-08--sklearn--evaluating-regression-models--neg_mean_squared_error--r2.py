@@ -3,7 +3,11 @@ Evaluate the performance of a regression model.
 ->
 Use mean squared error (MSE) or R^2.
 
-1) $MSE = 1 / n \sum_i^n ({y_predicted}_i - {y_true}_i)$
+1)
+
+$$
+MSE = 1 / n \sum_i^n ({y_predicted}_i - {y_true}_i)
+$$
 
 Squaring penalizes a few large errors more than many small errors, for example:
 MSE of model A: 0^2 + 10^2 = 100
@@ -18,7 +22,11 @@ assume that higher values are better than lower values.
 ->
 In Scikit-Learn, the negative MSE is used with scoring='neg_mean_squared_error'.
 
-2) $R^2 = 1 - \sum_i^n ({y_true}_i - {y_predicted}_i) / \sum_i^2 ({y_true}_i - y_mean)$
+2)
+
+$$
+R^2 = 1 - \sum_i^n ({y_true}_i - {y_predicted}_i) / \sum_i^2 ({y_true}_i - y_mean)
+$$
 
 The closer that $R^2$ is to 1, the better the model.
 """

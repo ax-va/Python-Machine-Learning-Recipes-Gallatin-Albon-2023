@@ -5,17 +5,23 @@ Use a learning algorithm that includes a shrinkage penalty
 (also called regularization) like ridge regression and lasso regression.
 
 In the standard linear regression, we minimize the residual sum of squares (RSS)
-$RSS = \sum_{i=1}^n (y_{true, i} - y_{predicted, i})$
+$$
+RSS = \sum_{i=1}^n (y_{true, i} - y_{predicted, i})
+$$
 
 In the regularized regression, we minimize RSS and some penalty
 (called a shrinkage penalty) for the total size of the coefficient values.
 
 In ridge regression, we minimize
-$RSS + \alpha \sum_{j=1}^p beta_j^2$,
+$$
+RSS + \alpha \sum_{j=1}^p beta_j^2
+$$,
 where beta_j for j=1,...,p are feature coefficients and \alpha is a hyperparameter.
 
 In lasso regression, we minimize
-$RSS/(2n) + \alpha \sum_{j=1}^p \abs{beta_j}$,
+$$
+RSS/(2n) + \alpha \sum_{j=1}^p \abs{beta_j}
+$$,
 where n is the number of observations.
 
 A general rule of thumb:

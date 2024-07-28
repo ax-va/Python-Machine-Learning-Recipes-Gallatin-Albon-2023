@@ -2,11 +2,15 @@
 Simplify your linear regression model by reducing the number of features.
 
 In ridge regression, we minimize
-$RSS + \alpha \sum_{j=1}^p beta_j^2$,
+$$
+RSS + \alpha \sum_{j=1}^p beta_j^2
+$$,
 where beta_j for j=1,...,p are feature coefficients and \alpha is a hyperparameter.
 
 In lasso regression, we minimize
-$RSS/(2n) + \alpha \sum_{j=1}^p \abs{beta_j}$,
+$$
+RSS/(2n) + \alpha \sum_{j=1}^p \abs{beta_j}
+$$,
 where n is the number of observations.
 
 A general rule of thumb:

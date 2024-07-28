@@ -7,7 +7,9 @@ Remove uninformative features in a categorical target vector.
 1. Chi-squared statistics examine the independence of two
 categorical vectors (here, a feature vector and the target vector):
 
-$$\chi^2 = \sum_{ij} (O_{ij} - E_{ij}) / E_{ij}$$,
+$$
+\chi^2 = \sum_{ij} (O_{ij} - E_{ij}) / E_{ij}
+$$,
 
 where $O_{ij}$ is the observed count of (<feature_value_i>, <target_value_j>),
 and $E_{ij}$ is the expected count of that as if the events were independent, that is,

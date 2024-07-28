@@ -6,7 +6,9 @@ Use Variance thresholding (VT).
 Idea: features with low variance are likely less interesting (and less useful) than features with high variance.
 
 1. Calculate for each feature x the variance:
-$Var(x) = 1 / n \sum_{i=1}^n (x_i - x_mean)^2$,
+$$
+Var(x) = 1 / n \sum_{i=1}^n (x_i - x_mean)^2
+$$,
 where x_i is an i-th observation of x.
 
 2. Drop all features whose variance does not meet that threshold.
