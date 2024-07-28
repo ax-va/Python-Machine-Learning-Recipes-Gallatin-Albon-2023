@@ -171,3 +171,9 @@ https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.Random
 
 ## Random Search for Hyper-Parameter Optimization
 https://www.jmlr.org/papers/volume13/bergstra12a/bergstra12a.pdf
+
+## Scikit-Learn: LogisticRegressionCV
+https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegressionCV.html
+
+## Scikit-Learn: Model specific cross-validation
+https://scikit-learn.org/stable/modules/grid_search.html#model-specific-cross-validation
