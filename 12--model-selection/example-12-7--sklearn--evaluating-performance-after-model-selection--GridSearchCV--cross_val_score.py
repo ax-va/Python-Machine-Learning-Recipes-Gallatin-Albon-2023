@@ -27,7 +27,7 @@ C = np.logspace(0, 4, 20)
 # Create hyperparameter options
 hyperparameters = dict(C=C)
 
-# Create the inner cross-validation
+# Create the "inner" cross-validation
 grid_search = GridSearchCV(
     logreg, hyperparameters,
     cv=5,
@@ -35,7 +35,7 @@ grid_search = GridSearchCV(
     verbose=0,
 )
 
-# Wrap the inner cross-validation in the outer cross-validation
+# Wrap the "inner" cross-validation in the "outer" cross-validation
 scores = cross_val_score(grid_search, features, target)
 # array([1.        , 1.        , 0.93333333, 0.93333333, 1.        ])
 
