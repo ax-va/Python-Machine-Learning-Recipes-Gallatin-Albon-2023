@@ -9,10 +9,10 @@ Notice that preprocessing should be built into the pipeline.
 Explanation:
 The general strategy is preprocessing only the training data and
 then applying that transformation to the test data.
-Thus, the test data know nothing about the training data.
+Thus, the test data should know nothing about the training data.
 In the k-fold cross-validation, that can only be done correctly by using a pipeline.
 If we preprocess all the data before the k-fold cross-validation,
-the training and test data are not isolated from each other and have exchanged information.
+the training and test data exchange information and are not isolated from each other.
 See also an experiment below.
 """
 import numpy as np
