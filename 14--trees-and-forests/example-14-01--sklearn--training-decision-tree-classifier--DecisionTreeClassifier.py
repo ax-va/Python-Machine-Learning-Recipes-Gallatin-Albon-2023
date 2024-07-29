@@ -27,6 +27,10 @@ features = iris.data
 target = iris.target
 iris.target_names
 # array(['setosa', 'versicolor', 'virginica'], dtype='<U10')
+features.shape
+# (150, 4)
+target.shape
+# (150,)
 
 # Create decision tree classifier
 decision_tree = DecisionTreeClassifier(random_state=0)
