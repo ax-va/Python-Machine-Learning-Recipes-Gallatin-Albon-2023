@@ -49,11 +49,11 @@ dot_data = tree.export_graphviz(
 graph = pydotplus.graph_from_dot_data(dot_data)
 
 # Export into files
-graph.write_svg("example-14-03--pydotplus--visualizing-decision-tree-model.svg")
-# graph.write_png("example-14-03--pydotplus--visualizing-decision-tree-model.png")
-# graph.write_pdf("example-14-03--pydotplus--visualizing-decision-tree-model.pdf")
+graph.write_svg("example-14-03--graphviz--pydotplus--visualizing-decision-tree-model.svg")
+# graph.write_png("example-14-03--graphviz--pydotplus--visualizing-decision-tree-model.png")
+# graph.write_pdf("example-14-03--graphviz--pydotplus--visualizing-decision-tree-model.pdf")
 
-# Comment out in SVG this part:
+# Comment out in SVG this artefact:
 """
 <g id="node18" class="node">
     <title>\n</title>
