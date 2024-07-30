@@ -183,3 +183,6 @@ https://www.cs.princeton.edu/courses/archive/spr07/cos424/papers/mitchell-dectre
 
 ## Scikit-Learn: Decision Tree Regression
 https://scikit-learn.org/stable/auto_examples/tree/plot_tree_regression.html
+
+## Random Forests
+https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm
