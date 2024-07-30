@@ -15,7 +15,7 @@ https://scikit-learn.org/stable/auto_examples/tree/plot_tree_regression.html
 from sklearn.tree import DecisionTreeRegressor
 from sklearn import datasets
 
-# Load data with only two features
+# Load data
 diabetes = datasets.load_diabetes()
 features = diabetes.data
 target = diabetes.target

@@ -22,7 +22,7 @@ https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestR
 from sklearn.ensemble import RandomForestRegressor
 from sklearn import datasets
 
-# Load data with only two features
+# Load data
 diabetes = datasets.load_diabetes()
 features = diabetes.data
 target = diabetes.target
