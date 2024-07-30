@@ -186,3 +186,6 @@ https://scikit-learn.org/stable/auto_examples/tree/plot_tree_regression.html
 
 ## Random Forests
 https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm
+
+## Scikit-Learn: RandomForestRegressor
+https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html

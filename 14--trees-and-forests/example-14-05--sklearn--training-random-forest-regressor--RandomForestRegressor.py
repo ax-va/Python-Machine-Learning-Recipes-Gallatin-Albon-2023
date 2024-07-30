@@ -1,18 +1,25 @@
 """
-Train a regression model using a decision tree.
+Train a regression model using a "forest" of randomized decision trees.
 ->
-Use Scikit-Learn's DecisionTreeRegressor.
+Use Scikit-Learn's RandomForestRegressor.
 
-By default, potential splits are measured on how much they reduce mean squared error (MSE):
-$$
-MSE = 1 / n \sum_i^n ({y_true}_i - {y_predicted]_i)
-$$
+Additional parameters:
+
+- max_features:
+sets the maximum number of features to consider at each node;
+defaults to "p" features, where "p" is the total number of features.
+
+- bootstrap:
+sets whether to sample with replacement; defaults to True.
+
+- n_estimators:
+sets the number of decision trees to construct; defaults to 10.
 
 See also:
-- Scikit-Learn: Decision Tree Regression
-https://scikit-learn.org/stable/auto_examples/tree/plot_tree_regression.html
+- Scikit-Learn: RandomForestRegressor
+https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html
 """
-from sklearn.tree import DecisionTreeRegressor
+from sklearn.ensemble import RandomForestRegressor
 from sklearn import datasets
 
 # Load data with only two features
@@ -48,18 +55,10 @@ target
 #         94., 183.,  66., 173.,  72.,  49.,  64.,  48., 178., 104., 132.,
 #        220.,  57.])
 
-# Create decision tree regressor
-decision_tree = DecisionTreeRegressor(random_state=0)
+# Create random forest regressor
+random_forest = RandomForestRegressor(random_state=0, n_jobs=-1)
 # Train model
-model = decision_tree.fit(features, target)
+model = random_forest.fit(features, target)
 # Predict the target value for an observation
 model.predict([features[0]])
-# array([0.])
-
-# Set mean absolute error (MAE)
-decision_tree_mae = DecisionTreeRegressor(criterion="absolute_error", random_state=0)
-# Train model
-model_mae = decision_tree_mae.fit(features, target)
-# Predict target value
-model_mae.predict([features[0]])
-# array([0.])
+# array([175.48])
