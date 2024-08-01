@@ -3,6 +3,13 @@ Train a regression model using a "forest" of randomized decision trees.
 ->
 Use Scikit-Learn's RandomForestRegressor.
 
+Motivation:
+
+Decision trees tend to fit the training data too closely what leads to overfitting.
+In a *random forest*, many decision trees are trained so that each tree uses
+a *bootstrapped subset* of observations, and at each node, the decision rule considers only a subset of features.
+(a *bootstrapped sample* of observations = a random sample of observations with replacement).
+
 Additional parameters:
 
 - max_features:
