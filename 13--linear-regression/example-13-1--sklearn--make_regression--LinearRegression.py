@@ -2,8 +2,10 @@
 Train a model that represents a linear relationship between the feature and target vector.
 
 Relationship between a target and only three features is represented as follows:
+$$
 y = beta_0 + beta_1 * feature_1 + beta_2 * feature_2 + beta_3 * feature_3 + error,
-where beta_0 is called bias or also intercept.
+$$
+where $beta_0$ is called bias or also intercept.
 """
 from sklearn.linear_model import LinearRegression
 from sklearn.datasets import make_regression

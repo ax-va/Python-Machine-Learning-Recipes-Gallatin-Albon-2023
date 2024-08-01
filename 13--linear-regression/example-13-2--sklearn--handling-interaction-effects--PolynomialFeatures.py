@@ -2,8 +2,10 @@
 Have a feature whose effect on the target variable depends on another feature.
 
 Relationship between a target and only three features is represented as follows:
+$$
 y = beta_0 + beta_1 * feature_1 + beta_2 * feature_2 + beta_3 * feature_1 * feature_2 + error,
-where beta_0 is called bias or also intercept.
+$$
+where $beta_0$ is called bias or also intercept.
 
 If we believe there is an interaction between features, we can use
 PolynomialFeatures to create interaction terms for all combinations of features.
