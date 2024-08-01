@@ -189,3 +189,6 @@ https://www.stat.berkeley.edu/~breiman/RandomForests/cc_home.htm
 
 ## Scikit-Learn: RandomForestRegressor
 https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html
+
+## Variable selection using Random Forests
+https://hal.science/file/index/docid/755489/filename/PRLv4.pdf

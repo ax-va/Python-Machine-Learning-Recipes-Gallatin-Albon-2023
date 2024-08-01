@@ -9,12 +9,13 @@ are considered more important.
 
 The higher the importance score, the more important the feature (all importance scores sum to 1).
 
-Notice:
+Two caveats:
 
 1.
-In Scikit-Learn, breaking up nominal categorical features into multiple binary features
+Breaking up nominal categorical features into multiple binary (i.e., one-hot encoded) features
 leads to the effect of spreading the importance of that feature across all the binary features.
-That can make each feature unimportant even when the original nominal categorical feature is highly important.
+That can make each feature unimportant even when the original nominal categorical feature is
+highly important.
 
 2.
 If two features are highly correlated, one feature will claim much of the importance,
