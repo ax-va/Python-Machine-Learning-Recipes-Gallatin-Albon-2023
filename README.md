@@ -195,3 +195,14 @@ https://hal.science/file/index/docid/755489/filename/PRLv4.pdf
 
 ## Explaining AdaBoost
 http://rob.schapire.net/papers/explaining-adaboost.pdf
+
+## XGBoost Documentation
+https://xgboost.readthedocs.io/en/stable/
+
+## LightGBM documentation
+https://lightgbm.readthedocs.io/en/latest/
+
+## Alternative: CatBoost
+CatBoost is a machine learning algorithm that uses gradient boosting on decision trees.
+It is available as an open source library.
+https://catboost.ai/en/docs/

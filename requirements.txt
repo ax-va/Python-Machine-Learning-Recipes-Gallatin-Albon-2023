@@ -39,6 +39,7 @@ kiwisolver==1.4.5
 langcodes==3.4.0
 language_data==1.2.0
 libclang==18.1.1
+lightgbm==4.5.0
 lxml==5.2.1
 marisa-trie==1.1.0
 Markdown==3.6
@@ -82,6 +83,7 @@ ptyprocess==0.7.0
 pure-eval==0.2.2
 pydantic==2.7.1
 pydantic_core==2.18.2
+pydotplus==2.0.2
 Pygments==2.17.2
 PyMySQL==1.1.1
 pyparsing==3.1.2
@@ -129,3 +131,4 @@ wcwidth==0.2.13
 weasel==0.3.4
 Werkzeug==3.0.3
 wrapt==1.16.0
+xgboost==2.1.1
