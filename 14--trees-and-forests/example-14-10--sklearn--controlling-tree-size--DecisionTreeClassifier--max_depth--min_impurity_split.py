@@ -1,7 +1,7 @@
 """
 Manually determine the structure and size of a decision tree.
-
-Parameters in Scikit-Learn for ree-based learning algorithms:
+->
+Use parameters in Scikit-Learn for ree-based learning algorithms:
 
 - max_depth
 Maximum depth of the tree.
