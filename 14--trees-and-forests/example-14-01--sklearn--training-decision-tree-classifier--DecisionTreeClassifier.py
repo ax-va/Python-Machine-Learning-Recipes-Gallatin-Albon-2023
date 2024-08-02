@@ -40,15 +40,25 @@ decision_tree = DecisionTreeClassifier(random_state=0)
 model = decision_tree.fit(features, target)
 # DecisionTreeClassifier(random_state=0)
 
-# Make new observation
-observation = [[5, 4, 3, 2]]
-# Predict class
-model.predict(observation)
-# array([1])
+# Make new observations
+observations = [[5, 4, 3, 2],
+                [2, 3, 4, 5],
+                [2, 4, 3, 5],
+                [1, 1, 1, 1],
+                [2, 2, 2, 2],
+                [3, 3, 3, 3]]
+# Predict classes
+model.predict(observations)
+# array([1, 2, 1, 1, 2, 2])
 
 # See predicted class probabilities for the three classes
-model.predict_proba(observation)
-# array([[0., 1., 0.]])
+model.predict_proba(observations)
+# array([[0., 1., 0.],
+#        [0., 0., 1.],
+#        [0., 1., 0.],
+#        [0., 1., 0.],
+#        [0., 0., 1.],
+#        [0., 0., 1.]])
 
 # Use a different impurity measurement
 decision_tree_entropy = DecisionTreeClassifier(

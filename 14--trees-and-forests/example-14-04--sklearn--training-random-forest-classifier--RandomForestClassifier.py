@@ -48,9 +48,16 @@ random_forest = RandomForestClassifier(
 )
 # Train model
 model = random_forest.fit(features, target)
-# Predict observation's class
-model.predict([[5, 4, 3, 2]])
-# array([1])
+# Make new observations
+observations = [[5, 4, 3, 2],
+                [2, 3, 4, 5],
+                [2, 4, 3, 5],
+                [1, 1, 1, 1],
+                [2, 2, 2, 2],
+                [3, 3, 3, 3]]
+# Predict classes
+model.predict(observations)
+# array([1, 2, 2, 0, 0, 2])
 
 # Use entropy as a metric
 random_forest_entropy = RandomForestClassifier(

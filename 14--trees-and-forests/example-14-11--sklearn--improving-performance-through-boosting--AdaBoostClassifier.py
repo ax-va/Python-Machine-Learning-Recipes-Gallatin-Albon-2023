@@ -68,8 +68,13 @@ ada_boost = AdaBoostClassifier(random_state=0, algorithm="SAMME")
 # Train model
 model = ada_boost.fit(features, target)
 
-# Make new observation
-observation = [[5, 4, 3, 2]]
-# Predict class
-model.predict(observation)
-# array([1])
+# Make new observations
+observations = [[5, 4, 3, 2],
+                [2, 3, 4, 5],
+                [2, 4, 3, 5],
+                [1, 1, 1, 1],
+                [2, 2, 2, 2],
+                [3, 3, 3, 3]]
+# Predict classes
+model.predict(observations)
+# array([1, 1, 1, 2, 2, 1])
