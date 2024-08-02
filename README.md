@@ -192,3 +192,6 @@ https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestR
 
 ## Variable selection using Random Forests
 https://hal.science/file/index/docid/755489/filename/PRLv4.pdf
+
+## Explaining AdaBoost
+http://rob.schapire.net/papers/explaining-adaboost.pdf
