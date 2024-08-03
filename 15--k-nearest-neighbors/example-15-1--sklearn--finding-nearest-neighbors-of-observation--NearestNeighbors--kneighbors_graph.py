@@ -24,11 +24,11 @@ where $x$ and $y$ are two observation.
 
 Notice:
 
-When using any learning algorithm based on distance,
-it is important to transform features so that they are on the same scale.
+When using any learning algorithm based on distance, it is important
+to transform features so that they are on the same scale.
 Otherwise, for example, if one feature is in millions of dollars and
-a second feature is in percentages,
-the distance calculated will be biased toward the former.
+a second feature is in percentages, the distance calculated will be
+biased toward the former.
 """
 import numpy as np
 from sklearn import datasets
@@ -39,8 +39,8 @@ from sklearn.preprocessing import StandardScaler
 iris = datasets.load_iris()
 features = iris.data
 
-# When using any learning algorithm based on distance,
-# it is important to transform features so that they are on the same scale.
+# When using any learning algorithm based on distance, it is important
+# to transform features so that they are on the same scale.
 standardizer = StandardScaler()
 
 # Standardize features
