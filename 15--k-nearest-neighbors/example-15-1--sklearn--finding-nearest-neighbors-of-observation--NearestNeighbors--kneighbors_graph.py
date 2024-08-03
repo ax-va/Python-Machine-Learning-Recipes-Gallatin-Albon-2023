@@ -12,12 +12,12 @@ $$
 
 - Manhattan distance
 $$
-\sum_i \abs{x_i - y_i}
+\sum_i |x_i - y_i|
 $$
 
 - Minkowski distance
 $$
-(\sum_i \abs{x_i - y_i}^p)^{1/p}
+(\sum_i |x_i - y_i|^p)^{1/p}
 $$
 
 where $x$ and $y$ are two observation.
