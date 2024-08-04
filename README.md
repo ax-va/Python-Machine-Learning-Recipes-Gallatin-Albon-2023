@@ -206,3 +206,6 @@ https://lightgbm.readthedocs.io/en/latest/
 CatBoost is a machine learning algorithm that uses gradient boosting on decision trees.
 It is available as an open source library.
 https://catboost.ai/en/docs/
+
+## K Nearest Neighbor and the Bias-variance Trade-off
+https://teazrq.github.io/stat542/rlab/knn.html

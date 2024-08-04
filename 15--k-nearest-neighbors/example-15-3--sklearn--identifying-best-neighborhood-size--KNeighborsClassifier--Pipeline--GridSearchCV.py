@@ -4,8 +4,12 @@ Select the best value for k in a k-nearest neighbors classifier.
 Use model selection techniques like GridSearchCV with preprocessing using Pipeline.
 
 The bias-variance trade-off:
-- k = n -> high bias but low variance -> underfitting
-- k = 1 -> low bias but high variance -> overfitting
+- k = n -> high bias but low variance (very low model complexity) -> underfitting
+- k = 1 -> low bias but high variance (very high model complexity) -> overfitting
+
+See also:
+- K Nearest Neighbor and the Bias-variance Trade-off
+https://teazrq.github.io/stat542/rlab/knn.html
 """
 import numpy as np
 from sklearn.neighbors import KNeighborsClassifier
