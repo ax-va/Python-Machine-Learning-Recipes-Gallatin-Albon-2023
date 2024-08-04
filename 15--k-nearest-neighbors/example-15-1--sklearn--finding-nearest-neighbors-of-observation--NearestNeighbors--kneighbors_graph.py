@@ -8,17 +8,17 @@ Distance metrics:
 - Euclidean distance (default for Scikit-Learn's NearestNeighbors)
 $$
 \sqrt{\sum_i (x_i - y_i)^2}
-$$
+$$;
 
 - Manhattan distance
 $$
 \sum_i |x_i - y_i|
-$$
+$$;
 
 - Minkowski distance
 $$
 (\sum_i |x_i - y_i|^p)^{1/p}
-$$
+$$,
 
 where $x$ and $y$ are two observation.
 
@@ -67,7 +67,7 @@ features_standardized[indices]
 # To find the three closest observations based on Euclidean distance
 nearest_neighbors_euclidean = NearestNeighbors(
     n_neighbors=3,
-    metric='euclidean',
+    metric='euclidean',  # by default
 ).fit(features_standardized)
 
 # Use kneighbors_graph to create a matrix indicating
