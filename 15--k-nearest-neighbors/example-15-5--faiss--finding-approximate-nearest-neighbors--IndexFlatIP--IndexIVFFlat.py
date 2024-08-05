@@ -16,6 +16,9 @@ to limit the scope of the search space for nearest neighbors.
 IVF uses Voronoi tessellations to partition the search space
 into a number of distinct areas (or clusters), each of which
 contains only a small subset of the total observations.
+Then, the cluster centroids are found and the search is continued
+only in the closest centroid.
+
 
 See also:
 - Nearest Neighbor Indexes for Similarity Search
