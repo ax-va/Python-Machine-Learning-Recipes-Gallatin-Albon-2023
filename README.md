@@ -209,3 +209,6 @@ https://catboost.ai/en/docs/
 
 ## K Nearest Neighbor and the Bias-variance Trade-off
 https://teazrq.github.io/stat542/rlab/knn.html
+
+## Nearest Neighbor Indexes for Similarity Search
+https://www.pinecone.io/learn/series/faiss/vector-indexes/
