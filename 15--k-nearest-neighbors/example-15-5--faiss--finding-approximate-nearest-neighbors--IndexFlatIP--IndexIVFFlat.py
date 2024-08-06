@@ -39,7 +39,7 @@ features_standardized = standardizer.fit_transform(features)
 
 # Set faiss parameters
 n_features = features_standardized.shape[1]  # 4
-nlist = 3  # number of clusters
+nlist = 3  # number of clusters to create
 k = 2
 
 # Create an inverted file index (IVF).

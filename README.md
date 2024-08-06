@@ -212,3 +212,6 @@ https://teazrq.github.io/stat542/rlab/knn.html
 
 ## Nearest Neighbor Indexes for Similarity Search
 https://www.pinecone.io/learn/series/faiss/vector-indexes/
+
+## Vertex AI Vector Search
+https://cloud.google.com/vertex-ai/docs/vector-search/overview?hl=de#why_does_ann_perform_approximate_matches_instead_of_exact_matches
