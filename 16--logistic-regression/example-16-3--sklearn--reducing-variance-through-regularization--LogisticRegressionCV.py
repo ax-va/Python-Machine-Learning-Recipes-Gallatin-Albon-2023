@@ -1,7 +1,7 @@
 """
 Reduce the variance of a logistic regression model.
 ->
-Tune the regularization strength hyperparameter, $C$.
+Tune the inverse of the regularization strength hyperparameter, $C$.
 
 A penalty term is added to the loss function,
 typically the L1 and L2 penalties.
