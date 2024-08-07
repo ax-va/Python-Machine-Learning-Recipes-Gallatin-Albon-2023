@@ -49,6 +49,6 @@ model.predict_proba(new_observation)
 model.intercept_
 # array([0.16638974])
 
-# logistic regression parameters "beta_1": vector of 4 (4 features)
+# logistic regression parameters "beta_1": 4-vector (4 features)
 model.coef_
 # array([[ 0.82618731, -1.15824998,  1.52836551,  1.53896841]])

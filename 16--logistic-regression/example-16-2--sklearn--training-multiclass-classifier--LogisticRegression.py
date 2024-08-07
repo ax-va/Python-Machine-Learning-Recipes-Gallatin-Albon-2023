@@ -47,3 +47,19 @@ model_ovr.predict_proba(new_observation)
 # array([[0.0387829 , 0.40665354, 0.55456356]])
 model_mlr.predict_proba(new_observation)
 # array([[0.0198333 , 0.74472208, 0.23544462]])
+
+# logistic regression parameters "intercept_" (3 classes)
+model_ovr.intercept_
+# array([-2.4782882 , -0.9387282 , -3.80186027])
+model_mlr.intercept_
+# array([-0.20463897,  2.07455834, -1.86991938])
+
+# logistic regression parameters "coef_" (3 classes and 4 features)
+model_ovr.coef_
+# array([[-1.05603354,  1.22597119, -1.76482206, -1.62922907],
+#        [ 0.13599151, -1.27438121,  0.79705947, -0.91626954],
+#        [ 0.14017374, -0.51464011,  2.48068262,  3.14066798]])
+model_mlr.coef_
+# array([[-1.07659238,  1.15977648, -1.92814138, -1.81227307],
+#        [ 0.5899243 , -0.36263595, -0.36461312, -0.82700241],
+#        [ 0.48666809, -0.79714052,  2.2927545 ,  2.63927548]])
