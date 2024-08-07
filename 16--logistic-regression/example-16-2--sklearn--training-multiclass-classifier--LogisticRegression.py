@@ -3,16 +3,18 @@ Given more than two classes, train a classifier model.
 ->
 Use Scikit-Learn's LogisticRegression with *one-vs-rest* or *multinomial* methods.
 
-- one-vs-rest logistic regression (OvR):
+- *one-vs-rest* logistic regression (OvR):
 A separate model is trained for each class predicted, whether an observation is that class or not.
 It assumes that each classification problem (e.g., class 0 or not) is independent.
 
-- multinomial logistic regression (MLR):
+- *multinomial logistic regression* (MLR):
 The sigmoid (also logistic) function is replaced with the softmax function:
 $$
 P(y_i = k | X) = \exp{\beta_k x_i} / \sum_{j=1}^K \exp(\beta_j x_i)
 $$,
-where $K$ is the total number of classes.
+where $\beta_j$ and $x_i$ are vectors,
+the index $i$ denotes an observation index, and
+$K$ is the total number of classes.
 ->
 The probabilities are more reliable (i.e., better calibrated).
 """

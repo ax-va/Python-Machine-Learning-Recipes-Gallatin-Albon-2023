@@ -5,12 +5,15 @@ Use a logistic regression Scikit-Learn's LogisticRegression.
 
 Logistic regression is a widely used binary classifier.
 using the composition of a linear model
-$$ \beta_0 + \beta_1 x $$
+$$ \beta_0 + \beta_1 x_i $$,
+(where $\beta_0$ is a scalar,
+$\beta_1$ and $x_i$ are vectors, and
+the index $i$ denotes an observation index)
 and the sigmoid (also logistic) function
 $$ 1 / (1 + \exp{-z}) $$,
 such that the conditional probability is equal
 $$
-P(y_i = 1 | X) = 1 / (1 + \exp{-(\beta_0 + \beta_1 x)})
+P(y_i = 1 | X) = 1 / (1 + \exp{-(\beta_0 + \beta_1 x_i)})
 $$.
 """
 from sklearn.linear_model import LogisticRegression
@@ -41,3 +44,11 @@ model.predict_proba(new_observation)
 
 # P(y_new_observation = 0 | X) ~ 0.177
 # P(y_new_observation = 1 | X) ~ 0.823
+
+# logistic regression parameters "beta_0"
+model.intercept_
+# array([0.16638974])
+
+# logistic regression parameters "beta_1": vector of 4 (4 features)
+model.coef_
+# array([[ 0.82618731, -1.15824998,  1.52836551,  1.53896841]])

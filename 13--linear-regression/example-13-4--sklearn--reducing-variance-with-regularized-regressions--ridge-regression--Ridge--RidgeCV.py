@@ -4,10 +4,12 @@ Reduce the variance of your linear regression model.
 Use a learning algorithm that includes a shrinkage penalty
 (also called regularization) like ridge regression and lasso regression.
 
+Regularization is a method of penalizing complex models to reduce their variance.
+
 In the standard linear regression, we minimize the residual sum of squares (RSS)
 $$
 RSS = \sum_{i=1}^n (y_{true, i} - y_{predicted, i})
-$$
+$$.
 
 In the regularized regression, we minimize RSS and some penalty
 (called a shrinkage penalty) for the total size of the coefficient values.
