@@ -3,7 +3,9 @@ Predict a class of an observation based on the class of its neighbors.
 ->
 If the dataset is not very large, use Scikit-Learn's KNeighborsClassifier.
 
-The probability of an observation $x_u$ to be class $j$ using $k$ nearest neighbors:
+In k-nearest neighbors, an observation's k neighbor's classes "vote"
+to get a probability that an observation is of some given class.
+The probability of an observation $x_u$ to be class $j$ using $k$-nearest neighbors:
 $$
 P_j = 1 / k \sum_{i in \I_u} 1(y_i = j)
 $$,
