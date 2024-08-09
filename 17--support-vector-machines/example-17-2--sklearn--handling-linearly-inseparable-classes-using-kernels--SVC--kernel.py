@@ -6,31 +6,31 @@ kernel functions to create nonlinear decision boundaries.
 
 A support vector classifier can be represented as
 $$
-f(x_i) = \beta_0 + \sum_{s \n S} \alpha_i K(x_s, x_i)
+f(x_o) = \beta_0 + \sum_{i \in S} \alpha_i K(x_i, x_o)
 $$,
 where
 $\beta_0$ is the bias,
 $S$ is the set of all support vector observations,
-$\alpha$ is the model parameter to be learned,
-$x_s$ and $x_i$ are two support vector observations, and
-the kernel function $K$ support vector observations $x_s$ and $x_i$.
+each $\alpha_i$ is the model parameter to be learned,
+$x_i$ and $x_o$ are two support vector observations, and
+the kernel function $K$ support vector observations $x_i$ and $x_o$.
 
 K determines the type of hyperplane used to separate classes:
 
 - linear kernel for a basic linear hyperplane
 $$
-K(x_s, x_i) = \sum_{j=1}^p x_{js} x_{ji}
+K(x_i, x_o) = \sum_{j=1}^p x_{ji} x_{jo}
 $$,
 where $p$ is the number of features;
 
 - polynomial kernel for a nonlinear decision boundary
 $$
-K(x_s, x_i) = (r + \gamma \sum_{j=1}^p x_{js} x_{ji})^d
+K(x_i, x_o) = (r + \gamma \sum_{j=1}^p x_{ji} x_{jo})^d
 $$;
 
 - radial basis function kernel (one of the most common kernels)
 $$
-K(x_s, x_i) = \exp{-\gamma \sum_{j=1}^p (x_{js} x_{ji})^2}
+K(x_i, x_o) = \exp{-\gamma \sum_{j=1}^p (x_{ji} x_{jo})^2}
 $$,
 where $\gamme > 0$.
 """
