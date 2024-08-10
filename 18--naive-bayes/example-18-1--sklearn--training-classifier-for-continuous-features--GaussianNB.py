@@ -49,7 +49,7 @@ new_observation = [[5.2, 3.6, 1.5, 0.3]]
 model.predict(new_observation)
 # array([0])
 
-# Set prior probabilities p(y) of each class of 3 (does not work)
+# Set prior probabilities P(y) of each class of 3 (does not work)
 clf = GaussianNB(priors=[1e-12, 1-1e-11, 9e-12])
 # Train model
 model_priors = clf.fit(features, target)
