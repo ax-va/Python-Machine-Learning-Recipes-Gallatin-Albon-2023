@@ -45,6 +45,7 @@ classifier = MultinomialNB(
     # if not set, they are learned from data
     class_prior=[0.25, 0.5],
     # # to use a uniform distribution for classes
+    # class_prior = None,
     # fit_prior=False,
     # # smoothing hyperparameter; "alpha=0.0" -> no smoothing
     # alpha=1.0,
