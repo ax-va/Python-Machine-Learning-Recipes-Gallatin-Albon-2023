@@ -1,10 +1,11 @@
 """
-Train a naive Bayes classifier with only continuous features.
+Train a naive Bayes classifier for only continuous features.
 ->
 Use a Gaussian naive Bayes classifier in Scikit-Learn.
 
 Warning:
-    Found out that "GaussianNB(priors=...)" does not set priors.
+- Found out that "GaussianNB(priors=...)" does not set priors.
+https://github.com/scikit-learn/scikit-learn/issues/29648
 
 The Gaussian naive Bayes classifier is best used in cases of all continuous features.
 The likelihood of the feature values $x_j$, given an observation of class $y$,
@@ -16,8 +17,8 @@ where $\sigma_{x_jy}^2$ and $\mu_{x_jy}$ are the variance and mean of $x_j$ for 
 
 Then
 $$
-p(y | observations) ~ p(observations | y) p(y) = \prod_{observation} p(observation | y) p(y)
-~ \prod_{observation} \prod_{x_j} p(x_j | y) p(y)
+P(y | observations) ~ P(observations | y) P(y) = \prod_{observation} P(observation | y) P(y) \\
+~ \prod_{observation} \prod_{x_j} P(y) \int_{x_j} p(x_j | y) dx_j
 $$.
 The formula will be logarithmed.
 
