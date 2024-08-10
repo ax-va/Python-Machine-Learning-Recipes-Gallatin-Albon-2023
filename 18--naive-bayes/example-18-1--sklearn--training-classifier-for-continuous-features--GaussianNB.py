@@ -20,6 +20,15 @@ p(y | observations) ~ p(observations | y) p(y) = \prod_{observation} p(observati
 ~ \prod_{observation} \prod_{x_j} p(x_j | y) p(y)
 $$.
 The formula will be logarithmed.
+
+Notice:
+Predicted probabilities obtained by "predict_proba" is are not calibrated.
+->
+That is, they should not be believed.
+
+See also:
+- How Naive Bayes classifier algorithm works in machine learning
+https://dataaspirant.com/naive-bayes-classifier-machine-learning/
 """
 from sklearn import datasets
 from sklearn.naive_bayes import GaussianNB
