@@ -218,3 +218,6 @@ https://cloud.google.com/vertex-ai/docs/vector-search/overview?hl=de#why_does_an
 
 ## How Naive Bayes classifier algorithm works in machine learning
 https://dataaspirant.com/naive-bayes-classifier-machine-learning/
+
+## Introduction to K-means Clustering
+https://blogs.oracle.com/ai-and-datascience/post/introduction-to-k-means-clustering
