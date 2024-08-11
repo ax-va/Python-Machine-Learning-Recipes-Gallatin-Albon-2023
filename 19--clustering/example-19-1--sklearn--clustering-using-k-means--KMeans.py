@@ -42,7 +42,7 @@ cluster = KMeans(
 # Train model
 model = cluster.fit(features_std)
 
-# predicted classes
+# determined classes
 model.labels_
 # array([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
 #        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
@@ -52,7 +52,7 @@ model.labels_
 #        2, 2, 2, 0, 0, 2, 2, 2, 2, 0, 2, 0, 2, 0, 2, 2, 0, 2, 2, 2, 2, 2,
 #        2, 0, 0, 2, 2, 2, 0, 2, 2, 2, 0, 2, 2, 2, 0, 2, 2, 0], dtype=int32)
 
-# Rename classes (if necessary) to compare with true classes
+# Rename determined classes (if necessary) to compare with true classes
 indices_0 = model.labels_==1
 indices_1 = model.labels_==0
 indices_2 = model.labels_==2
@@ -61,7 +61,7 @@ model.labels_[indices_0] = 0
 model.labels_[indices_1] = 1
 model.labels_[indices_2] = 2
 
-# renamed classes
+# renamed determined classes
 model.labels_
 # array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 #        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -81,7 +81,7 @@ iris.target
 #        2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
 #        2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2])
 
-# Predict observation's cluster
+# Predict observation's cluster relative to the renamed classes
 model.predict([[0.8, 0.8, 0.8, 0.8]])
 # array([2], dtype=int32)
 

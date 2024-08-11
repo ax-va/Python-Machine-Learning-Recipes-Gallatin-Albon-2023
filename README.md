@@ -221,3 +221,6 @@ https://dataaspirant.com/naive-bayes-classifier-machine-learning/
 
 ## Introduction to K-means Clustering
 https://blogs.oracle.com/ai-and-datascience/post/introduction-to-k-means-clustering
+
+## The mean shift clustering algorithm
+https://www.efavdb.com/mean-shift
