@@ -4,7 +4,7 @@ Train a naive Bayes classifier for only continuous features.
 Use a Gaussian naive Bayes classifier in Scikit-Learn.
 
 Warning:
-- Found out that "GaussianNB(priors=...)" does not set priors.
+- Prior probabilities are too small to change non-calibrated extreme predicted probabilities
 https://github.com/scikit-learn/scikit-learn/issues/29648
 
 The Gaussian naive Bayes classifier is best used in cases of all continuous features.
@@ -49,7 +49,10 @@ new_observation = [[5.2, 3.6, 1.5, 0.3]]
 model.predict(new_observation)
 # array([0])
 
-# Set prior probabilities P(y) of each class of 3 (does not work)
+# problem
+model.predict_proba([[5.2, 3.6, 1.5, 0.3]])
+
+# Set prior probabilities P(y) of each class of 3
 clf = GaussianNB(priors=[1e-12, 1-1e-11, 9e-12])
 # Train model
 model_priors = clf.fit(features, target)
