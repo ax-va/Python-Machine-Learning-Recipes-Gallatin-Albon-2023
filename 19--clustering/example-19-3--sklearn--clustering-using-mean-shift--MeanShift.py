@@ -3,6 +3,10 @@ Group observations without assuming the number of clusters or their shape.
 ->
 Use mean shift clustering.
 
+Simple explanation:
+A point looks within a radius and makes a step in the direction of the most points they can see.
+This is repeated until all the points are assigned to the clusters in which they end up.
+
 See also:
 - The mean shift clustering algorithm
 https://www.efavdb.com/mean-shift
