@@ -25,10 +25,8 @@ features_std = scaler.fit_transform(features)
 
 # Create mean shift object
 cluster = MeanShift(n_jobs=-1)
-
 # Train model
 model = cluster.fit(features_std)
-
 # Two classes have been found instead of three classes
 model.labels_
 # array([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
