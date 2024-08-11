@@ -4,7 +4,7 @@ Train a naive Bayes classifier for only continuous features.
 Use a Gaussian naive Bayes classifier in Scikit-Learn.
 
 Warning:
-- Prior probabilities are too small to change non-calibrated extreme predicted probabilities
+- Prior probabilities can be too small to change non-calibrated extreme predicted probabilities
 https://github.com/scikit-learn/scikit-learn/issues/29648
 
 The Gaussian naive Bayes classifier is best used in cases of all continuous features.
@@ -49,8 +49,10 @@ new_observation = [[5.2, 3.6, 1.5, 0.3]]
 model.predict(new_observation)
 # array([0])
 
-# problem
+# Non-calibrated predicted probabilities are too extreme
+# and cannot be changed by "GaussianNB(priors=...".
 model.predict_proba([[5.2, 3.6, 1.5, 0.3]])
+# array([[1.00000000e+00, 6.06941525e-17, 3.10259941e-24]])
 
 # Set prior probabilities P(y) of each class of 3
 clf = GaussianNB(priors=[1e-12, 1-1e-11, 9e-12])
@@ -61,4 +63,7 @@ new_observation = [[5.2, 3.6, 1.5, 0.3]]
 # Predict class
 model_priors.predict(new_observation)
 # array([0])
+
+# also
 clf.predict(new_observation)
+# array([0])
