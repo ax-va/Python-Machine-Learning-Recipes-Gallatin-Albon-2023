@@ -3,7 +3,7 @@ Group observations into k groups.
 ->
 Use k-means clustering.
 
-Steps:
+Idea:
 1. Create k cluster "center" points at random locations.
 2. For each observation:
     a. Calculate the distance between each observation and the k center points.
