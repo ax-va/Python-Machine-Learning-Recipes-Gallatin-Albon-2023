@@ -14,7 +14,7 @@ Finally, any observation close to a cluster but not a core sample is considered 
 Also, any observation not close to the cluster is labeled an outlier.
 Outlier observations are labeled as -1.
 
-Parameters:
+DBSCAN parameters in Scikit-Learn:
 
 - eps:
 The maximum distance from an observation for another observation to be considered its neighbor.
