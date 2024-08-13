@@ -224,3 +224,15 @@ https://blogs.oracle.com/ai-and-datascience/post/introduction-to-k-means-cluster
 
 ## The mean shift clustering algorithm
 https://www.efavdb.com/mean-shift
+
+## PyTorch: Tensors
+https://pytorch.org/tutorials/beginner/basics/tensorqs_tutorial.html
+
+## PyTorch: Bridge with NumPy
+https://pytorch.org/tutorials/beginner/blitz/tensor_tutorial.html#bridge-to-np-label
+
+## PyTorch: Sparse Tensor
+https://pytorch.org/docs/stable/sparse.html
+
+## PyTorch: Operations on Tensors
+https://pytorch.org/tutorials/beginner/basics/tensorqs_tutorial.html#operations-on-tensors
