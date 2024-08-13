@@ -236,3 +236,9 @@ https://pytorch.org/docs/stable/sparse.html
 
 ## PyTorch: Operations on Tensors
 https://pytorch.org/tutorials/beginner/basics/tensorqs_tutorial.html#operations-on-tensors
+
+## PyTorch: Broadcasting semantics
+https://pytorch.org/docs/stable/notes/broadcasting.html
+
+## PyTorch: Vectorization and Broadcasting with PyTorch
+https://blog.paperspace.com/pytorch-vectorization-and-broadcasting/

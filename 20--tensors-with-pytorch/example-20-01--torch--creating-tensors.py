@@ -7,6 +7,9 @@ PyTorch: Tensors
 """
 import torch
 
+torch.__version__
+# '2.3.1+cu121'
+
 # Create a vector as a row
 tensor_row = torch.tensor([1, 2, 3])
 # tensor([1, 2, 3])
