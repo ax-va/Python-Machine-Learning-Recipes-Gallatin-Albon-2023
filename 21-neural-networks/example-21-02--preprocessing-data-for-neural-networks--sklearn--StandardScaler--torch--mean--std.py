@@ -9,7 +9,7 @@ it is important that all features have the same scale with
 the mean of 0 and the standard deviation of 1.
 This is not always necessary; for example, in the case all binary features.
 
-That can be done by using:
+Standardization can be done by using:
 1. Scikit-Learn's StandardScaler, or
 2. the PyTorch's mean and std methods.
 """
