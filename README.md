@@ -242,3 +242,6 @@ https://pytorch.org/docs/stable/notes/broadcasting.html
 
 ## PyTorch: Vectorization and Broadcasting with PyTorch
 https://blog.paperspace.com/pytorch-vectorization-and-broadcasting/
+
+## PyTorch: A Gentle Introduction to torch.autograd
+https://pytorch.org/tutorials/beginner/blitz/autograd_tutorial.html
