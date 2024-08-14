@@ -10,7 +10,7 @@ the mean of 0 and the standard deviation of 1.
 This is not always necessary; for example, in the case all binary features.
 
 Standardization can be done by using:
-1. Scikit-Learn's StandardScaler, or
+1. Scikit-Learn's StandardScaler and PyTorch's from_numpy, or
 2. the PyTorch's mean and std methods.
 """
 import numpy as np
