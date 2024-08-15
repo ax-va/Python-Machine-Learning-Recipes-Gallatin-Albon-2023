@@ -17,6 +17,9 @@ https://pytorch.org/tutorials/beginner/blitz/autograd_tutorial.html
 """
 import torch
 
+torch.__version__
+# '2.3.1+cu121'
+
 # Create a torch tensor that requires gradients
 tensor = torch.tensor([1.0, 2.0, 3.0], requires_grad=True)
 # tensor([1., 2., 3.], requires_grad=True)

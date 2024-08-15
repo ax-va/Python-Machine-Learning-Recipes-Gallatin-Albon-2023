@@ -25,14 +25,15 @@ Loss functions for:
 - regression -> mean square error (MSE).
 
 Common optimizers:
-- stochastic gradient descent,
-- stochastic gradient descent with momentum,
-- root-mean-square propagation,
+- stochastic gradient descent;
+- stochastic gradient descent with momentum;
+- root-mean-square propagation;
 - adaptive moment estimation.
 
-Next, we are defining a feedforward two-layer neural network for binary classifications using two ways
-- nn.functional,
-- the Sequential class
+Next, we are defining a feedforward two-layer neural network
+for binary classifications using two ways:
+- nn.functional;
+- nn.Sequential.
 
 See also:
 - PyTorch: Build the Neural Network
@@ -84,7 +85,7 @@ feedforward_nn
 # another way to define the same neural network
 class SequentialNN(nn.Module):
     """
-    Feedforward two-layer neural network for binary classifications using the Sequential class.
+    Feedforward two-layer neural network for binary classifications using nn.Sequential.
     Each layer is "dense" (also called "fully connected")
     = All the units in the previous layer and in the next layer are connected.
     """
