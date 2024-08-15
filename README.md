@@ -245,3 +245,9 @@ https://blog.paperspace.com/pytorch-vectorization-and-broadcasting/
 
 ## PyTorch: A Gentle Introduction to torch.autograd
 https://pytorch.org/tutorials/beginner/blitz/autograd_tutorial.html
+
+## PyTorch: Build the Neural Network
+https://pytorch.org/tutorials/beginner/basics/buildmodel_tutorial.html
+
+## On Loss Functions for Deep Neural Networks in Classification
+https://arxiv.org/abs/1702.05659
