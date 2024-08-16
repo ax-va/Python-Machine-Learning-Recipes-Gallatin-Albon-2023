@@ -30,6 +30,10 @@ features_train, features_test, target_train, target_test = train_test_split(
     test_size=0.1,
     random_state=1,
 )
+features_train.shape
+# (900, 10)
+features_test.shape
+# (100, 10)
 
 # Set random seeds
 torch.manual_seed(0)
