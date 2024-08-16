@@ -1,8 +1,8 @@
 """
 Train a binary classifier neural network.
 ->
-Construct a feedforward neural network with an output layer using the sigmoid
-(logistic) function as the output activation function in PyTorch and train it.
+Construct a feedforward neural network with an output layer using
+the sigmoid (logistic) activation function in PyTorch and train it.
 
 Notice:
 python-dev for using Python API for C should be installed;
