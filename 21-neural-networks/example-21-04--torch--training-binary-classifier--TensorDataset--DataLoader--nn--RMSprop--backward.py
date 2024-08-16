@@ -94,9 +94,33 @@ for epoch_idx in range(3):  # how many epochs to use when training the data
         loss = criterion(output, target)
         loss.backward()  # to update the gradients
         optimizer.step()
-    print("Epoch:", epoch_idx + 1, ";", "\tLoss:", loss.item())
+        print("Epoch:", epoch_idx + 1, ";", "\tLoss:", loss.item())
+# Epoch: 1 ; 	Loss: 0.6873747110366821
+# Epoch: 1 ; 	Loss: 0.6832718849182129
+# Epoch: 1 ; 	Loss: 0.6220871210098267
+# Epoch: 1 ; 	Loss: 0.4690907299518585
+# Epoch: 1 ; 	Loss: 0.3916798532009125
+# Epoch: 1 ; 	Loss: 0.4014907479286194
+# Epoch: 1 ; 	Loss: 0.3759861886501312
+# Epoch: 1 ; 	Loss: 0.6534170508384705
 # Epoch: 1 ; 	Loss: 0.42521628737449646
+# Epoch: 2 ; 	Loss: 0.3898506164550781
+# Epoch: 2 ; 	Loss: 0.3298564553260803
+# Epoch: 2 ; 	Loss: 0.3747923970222473
+# Epoch: 2 ; 	Loss: 0.39405110478401184
+# Epoch: 2 ; 	Loss: 0.3992655277252197
+# Epoch: 2 ; 	Loss: 0.3789174556732178
+# Epoch: 2 ; 	Loss: 0.3495556712150574
+# Epoch: 2 ; 	Loss: 0.30129769444465637
 # Epoch: 2 ; 	Loss: 0.3600539267063141
+# Epoch: 3 ; 	Loss: 0.41171014308929443
+# Epoch: 3 ; 	Loss: 0.3562469482421875
+# Epoch: 3 ; 	Loss: 0.4012618362903595
+# Epoch: 3 ; 	Loss: 0.2834318280220032
+# Epoch: 3 ; 	Loss: 0.3406623899936676
+# Epoch: 3 ; 	Loss: 0.5299634337425232
+# Epoch: 3 ; 	Loss: 0.2672680914402008
+# Epoch: 3 ; 	Loss: 0.25573185086250305
 # Epoch: 3 ; 	Loss: 0.342937707901001
 
 # Evaluate neural network
