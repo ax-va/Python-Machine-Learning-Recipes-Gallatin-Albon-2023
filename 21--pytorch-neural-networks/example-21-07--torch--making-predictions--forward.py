@@ -129,7 +129,7 @@ for epoch_idx in range(NUM_EPOCHS):  # how many epochs to use when training the 
 
 # Predict classes
 with torch.no_grad():
-    # Round network.forward(x_train) to make a class from a probability
+    # Round "network.forward(x_train)" to make a class from a probability
     predicted_classes = network.forward(x_train).round()
 
 # Concatenate predicted_classes and y_train to compare their values.
