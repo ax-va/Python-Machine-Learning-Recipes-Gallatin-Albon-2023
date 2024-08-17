@@ -2,7 +2,7 @@
 Use a neural network to make predictions.
 ->
 Use PyTorch to construct a feedforward neural network,
-then make predictions using its forward method.
+then make predictions using the NN class's forward method.
 """
 import torch
 import torch.nn as nn
