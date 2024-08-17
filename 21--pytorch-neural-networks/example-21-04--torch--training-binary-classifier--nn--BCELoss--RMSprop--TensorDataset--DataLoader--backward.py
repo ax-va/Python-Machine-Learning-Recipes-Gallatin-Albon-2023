@@ -12,7 +12,6 @@ where 3.x is your Python version in your virtual environment.
 """
 import torch
 import torch.nn as nn
-import numpy as np
 from torch.utils.data import DataLoader, TensorDataset
 from torch.optim import RMSprop
 from sklearn.datasets import make_classification
@@ -27,6 +26,10 @@ features, target = make_classification(
     n_samples=1000,
     random_state=1,
 )
+# # Because we are using simulated data using Scikit-Learn make_classification,
+# # we don't have to standardize the features.
+# # But in for real data, we must do standardization.
+
 # Split training and test sets
 features_train, features_test, target_train, target_test = train_test_split(
     features, target,
@@ -38,9 +41,8 @@ features_train.shape
 features_test.shape
 # (100, 10)
 
-# Set random seeds
+# Set random seed for PyTorch
 torch.manual_seed(0)
-np.random.seed(0)
 
 # Convert data to PyTorch tensors
 x_train = torch.from_numpy(features_train).float()

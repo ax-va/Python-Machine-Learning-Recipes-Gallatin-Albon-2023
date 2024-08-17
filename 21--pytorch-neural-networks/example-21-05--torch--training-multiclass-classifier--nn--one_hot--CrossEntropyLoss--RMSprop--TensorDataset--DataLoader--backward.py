@@ -12,7 +12,6 @@ where 3.x is your Python version in your virtual environment.
 """
 import torch
 import torch.nn as nn
-import numpy as np
 from torch.utils.data import DataLoader, TensorDataset
 from torch.optim import RMSprop
 from sklearn.datasets import make_classification
@@ -28,17 +27,25 @@ features, target = make_classification(
     n_redundant=0,
     n_features=10,
     n_samples=1000,
+    random_state=1,
 )
+# Because we are using simulated data using Scikit-Learn make_classification,
+# we don't have to standardize the features.
+# But in for real data, we must do standardization.
+
 # Split training and test sets
 features_train, features_test, target_train, target_test = train_test_split(
     features, target,
     test_size=0.1,
     random_state=1,
 )
+features_train.shape
+# (900, 10)
+features_test.shape
+# (100, 10)
 
-# Set random seeds
+# Set random seeds for PyTorch
 torch.manual_seed(0)
-np.random.seed(0)
 
 # Convert data to PyTorch tensors
 x_train = torch.from_numpy(features_train).float()
@@ -109,33 +116,33 @@ for epoch_idx in range(NUM_EPOCHS):  # how many epochs to use when training the 
         loss.backward()  # to update the gradients
         optimizer.step()
         print("Epoch:", epoch_idx + 1, ";", "\tLoss:", loss.item())
-        # Epoch: 1 ; 	Loss: 1.102777361869812
-        # Epoch: 1 ; 	Loss: 1.0140036344528198
-        # Epoch: 1 ; 	Loss: 0.9002036452293396
-        # Epoch: 1 ; 	Loss: 0.8664718866348267
-        # Epoch: 1 ; 	Loss: 0.8068368434906006
-        # Epoch: 1 ; 	Loss: 0.8978130221366882
-        # Epoch: 1 ; 	Loss: 0.845928430557251
-        # Epoch: 1 ; 	Loss: 0.8498579263687134
-        # Epoch: 1 ; 	Loss: 0.7600250840187073
-        # Epoch: 2 ; 	Loss: 0.775653064250946
-        # Epoch: 2 ; 	Loss: 0.7758886814117432
-        # Epoch: 2 ; 	Loss: 0.8230465054512024
-        # Epoch: 2 ; 	Loss: 0.8089917898178101
-        # Epoch: 2 ; 	Loss: 0.7518138885498047
-        # Epoch: 2 ; 	Loss: 0.7131175994873047
-        # Epoch: 2 ; 	Loss: 0.7558932304382324
-        # Epoch: 2 ; 	Loss: 0.7803115844726562
-        # Epoch: 2 ; 	Loss: 0.7786457538604736
-        # Epoch: 3 ; 	Loss: 0.7506158351898193
-        # Epoch: 3 ; 	Loss: 0.7889423370361328
-        # Epoch: 3 ; 	Loss: 0.7288426160812378
-        # Epoch: 3 ; 	Loss: 0.7012325525283813
-        # Epoch: 3 ; 	Loss: 0.6914394497871399
-        # Epoch: 3 ; 	Loss: 0.7751169800758362
-        # Epoch: 3 ; 	Loss: 0.6826244592666626
-        # Epoch: 3 ; 	Loss: 0.7325385212898254
-        # Epoch: 3 ; 	Loss: 0.7058666944503784
+        # Epoch: 1 ; 	Loss: 1.1043038368225098
+        # Epoch: 1 ; 	Loss: 1.035480260848999
+        # Epoch: 1 ; 	Loss: 0.9150087237358093
+        # Epoch: 1 ; 	Loss: 0.918165922164917
+        # Epoch: 1 ; 	Loss: 0.9030938148498535
+        # Epoch: 1 ; 	Loss: 0.926216721534729
+        # Epoch: 1 ; 	Loss: 0.8137900829315186
+        # Epoch: 1 ; 	Loss: 0.8668067455291748
+        # Epoch: 1 ; 	Loss: 0.8065378665924072
+        # Epoch: 2 ; 	Loss: 0.8746051788330078
+        # Epoch: 2 ; 	Loss: 0.8785417079925537
+        # Epoch: 2 ; 	Loss: 0.8222912549972534
+        # Epoch: 2 ; 	Loss: 0.7480095028877258
+        # Epoch: 2 ; 	Loss: 0.7748420238494873
+        # Epoch: 2 ; 	Loss: 0.7890374660491943
+        # Epoch: 2 ; 	Loss: 0.7904543876647949
+        # Epoch: 2 ; 	Loss: 0.7396469712257385
+        # Epoch: 2 ; 	Loss: 0.8348904252052307
+        # Epoch: 3 ; 	Loss: 0.7954511046409607
+        # Epoch: 3 ; 	Loss: 0.7826321125030518
+        # Epoch: 3 ; 	Loss: 0.7200894951820374
+        # Epoch: 3 ; 	Loss: 0.7819511890411377
+        # Epoch: 3 ; 	Loss: 0.7846203446388245
+        # Epoch: 3 ; 	Loss: 0.7417611479759216
+        # Epoch: 3 ; 	Loss: 0.8112435936927795
+        # Epoch: 3 ; 	Loss: 0.8102736473083496
+        # Epoch: 3 ; 	Loss: 0.7723052501678467
 
 # Evaluate neural network
 with torch.no_grad():  # with no computing gradients for any tensor operation conducted in the inner block
@@ -144,4 +151,4 @@ with torch.no_grad():  # with no computing gradients for any tensor operation co
     test_accuracy = (output.round() == y_test).float().mean()
     print("Test Loss:", test_loss.item(), ";",
           "\tTest Accuracy:", test_accuracy.item())
-    # Test Loss: 0.7027209997177124 ; 	Test Accuracy: 0.8933333158493042
+    # Test Loss: 0.7891666889190674 ; 	Test Accuracy: 0.8199999928474426
