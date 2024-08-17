@@ -132,17 +132,13 @@ with torch.no_grad():
     # Round "network.forward(x_train)" to make a class from a probability
     predicted_classes = network.forward(x_train).round()
 
-# Concatenate predicted_classes and y_train to compare their values.
-
-# first 5 values
+# Concatenate predicted_classes and y_train to compare their first 5 values and last 5 values
 torch.cat((predicted_classes[:5, :], y_train[:5, :]), dim=1)
 # tensor([[0., 0.],
 #         [1., 1.],
 #         [1., 1.],
 #         [1., 1.],
 #         [0., 0.]])
-
-# last 5 values
 torch.cat((predicted_classes[-5:, :], y_train[-5:, :]), dim=1)
 # tensor([[1., 1.],
 #         [1., 1.],
