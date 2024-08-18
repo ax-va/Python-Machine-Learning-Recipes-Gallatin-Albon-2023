@@ -2,6 +2,8 @@
 Find the "sweet spot" in a neural network’s loss and accuracy score.
 ->
 Use Matplotlib to visualize the loss of the test and training set over each epoch.
+
+"sweet spot" = the test error is at its lowest point.
 """
 import matplotlib.pyplot as plt
 import torch
