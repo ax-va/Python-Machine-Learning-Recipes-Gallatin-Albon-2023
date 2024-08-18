@@ -17,7 +17,7 @@ from torch.optim import Adam
 from sklearn.datasets import make_classification
 from sklearn.model_selection import train_test_split
 
-NUM_EPOCHS = 100
+NUM_EPOCHS = 1000
 
 # Create data with 10 features and 1000 observations
 features, target = make_classification(
@@ -117,9 +117,9 @@ for epoch_idx in range(NUM_EPOCHS):  # how many epochs to use when training the 
     # Epoch: 2 ; 	Loss: 0.6934329867362976
     # Epoch: 3 ; 	Loss: 0.6797105669975281
     # ...
-    # Epoch: 98 ; 	Loss: 0.5167173147201538
-    # Epoch: 99 ; 	Loss: 0.5005437731742859
-    # Epoch: 100 ; 	Loss: 0.5039573907852173
+    # Epoch: 998 ; 	Loss: 0.4011973440647125
+    # Epoch: 999 ; 	Loss: 0.3576684594154358
+    # Epoch: 1000 ; Loss: 0.27274689078330994
 
     with torch.no_grad():
         train_output = network(x_train)
@@ -136,7 +136,7 @@ with torch.no_grad():  # with no computing gradients for any tensor operation co
     test_accuracy = (output.round() == y_test).float().mean()
     print("Test Loss:", test_loss.item(), ";",
           "\tTest Accuracy:", test_accuracy.item())
-    # Test Loss: 0.44349029660224915 ; 	Test Accuracy: 0.8799999952316284
+    # Test Loss: 0.2374035269021988 ; 	Test Accuracy: 0.9399999976158142
 
 
 # Visualize loss history

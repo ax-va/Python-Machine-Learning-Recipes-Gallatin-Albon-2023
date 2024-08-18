@@ -6,6 +6,8 @@ Use PyTorch Lightning to implement a strategy called *early stopping*.
 Early stopping can be implemented in PyTorch as a callback function.
 That is, a callback function can be applied at certain stages
 of the training process, such as at the end of each epoch.
+PyTorch does not have any EarlyStopping class,
+hence PyTorch Lightning's EarlyStopping is used.
 """
 import lightning as pl  # PyTorch Lightning
 import torch
@@ -16,7 +18,7 @@ from torch.optim import Adam
 from sklearn.datasets import make_classification
 from sklearn.model_selection import train_test_split
 
-NUM_EPOCHS = 100
+MAX_EPOCHS = 100
 
 # Create data with 10 features and 1000 observations
 features, target = make_classification(
@@ -119,7 +121,7 @@ trainer = pl.Trainer(
             patience=3,
         )
     ],
-    max_epochs=NUM_EPOCHS,
+    max_epochs=MAX_EPOCHS,
 )
 # Train network
 trainer.fit(model=network, train_dataloaders=train_loader)
