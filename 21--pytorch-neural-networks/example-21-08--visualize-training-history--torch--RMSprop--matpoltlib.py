@@ -28,9 +28,9 @@ features, target = make_classification(
     n_samples=1000,
     random_state=1,
 )
-# # Because we are using simulated data using Scikit-Learn make_classification,
-# # we don't have to standardize the features.
-# # But in for real data, we must do standardization.
+# Because we are using simulated data using Scikit-Learn make_classification,
+# we don't have to standardize the features.
+# But in for real data, we must do standardization.
 
 # Split training and test sets
 features_train, features_test, target_train, target_test = train_test_split(
@@ -125,5 +125,5 @@ plt.legend(["Training Loss", "Test Loss"])
 plt.xlabel("Epoch")
 plt.ylabel("Loss")
 # plt.show()
-plt.savefig('example-21-08--torch--matplotlib--visualize-training-history.svg')
+plt.savefig('example-21-08--visualize-training-history--torch--RMSprop--matplotlib.svg')
 plt.close()
