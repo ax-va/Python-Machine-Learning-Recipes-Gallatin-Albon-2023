@@ -1,23 +1,21 @@
 """
-Reduce overfitting by regularizing the weights of your network.
+Reduce overfitting by introducing noise into your network's architecture using dropout.
 ->
-Penalize the parameters of the network, also called *weight regularization*.
+Adding a torch.nn.Dropout layer into the network architecture.
 
-Notice:
-python-dev for using Python API for C should be installed;
-if not, install it on Ubuntu
-$ sudo apt-get install python3.x-dev
-where 3.x is your Python version in your virtual environment.
+Dropout = constantly and randomly dropping units in each batch.
+->
+NNs learn to be robust to disruptions (i.e., noise) in the other hidden units.
 """
 import matplotlib.pyplot as plt
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader, TensorDataset
-from torch.optim import Adam
+from torch.optim import RMSprop
 from sklearn.datasets import make_classification
 from sklearn.model_selection import train_test_split
 
-NUM_EPOCHS = 1000
+NUM_EPOCHS = 50
 
 # Create data with 10 features and 1000 observations
 features, target = make_classification(
@@ -67,6 +65,7 @@ class SequentialNN(nn.Module):
             torch.nn.Linear(16, 16),
             torch.nn.ReLU(),
             torch.nn.Linear(16, 1),
+            torch.nn.Dropout(0.1),  # dropping 10% of neurons in the previous layer every batch
             torch.nn.Sigmoid()
         )
 
@@ -80,13 +79,7 @@ network = SequentialNN()
 
 # Define loss function, optimizer
 criterion = nn.BCELoss()
-optimizer = Adam(
-    network.parameters(),
-    lr=1e-4,
-    # weight_decay determines how much to penalize higher parameter values
-    weight_decay=1e-5,
-    # Values greater than 0 indicate L2 regularization in PyTorch
-)
+optimizer = RMSprop(network.parameters())
 
 # Wrap data in TensorDataset
 train_data = TensorDataset(x_train, y_train)
@@ -102,9 +95,9 @@ train_loader = DataLoader(
 # Compile the model using torch 2.0's optimizer
 network = torch.compile(network)
 
-# Train neural network
 train_losses = []
 test_losses = []
+# Train neural network
 for epoch_idx in range(NUM_EPOCHS):  # how many epochs to use when training the data
     for batch_idx, (data, target) in enumerate(train_loader):
         optimizer.zero_grad()
@@ -112,14 +105,6 @@ for epoch_idx in range(NUM_EPOCHS):  # how many epochs to use when training the 
         loss = criterion(output, target)
         loss.backward()  # to update the gradients
         optimizer.step()
-    print("Epoch:", epoch_idx + 1, ";", "\tLoss:", loss.item())
-    # Epoch: 1 ; 	Loss: 0.7038822770118713
-    # Epoch: 2 ; 	Loss: 0.6934329867362976
-    # Epoch: 3 ; 	Loss: 0.6797105669975281
-    # ...
-    # Epoch: 998 ; 	Loss: 0.4011973440647125
-    # Epoch: 999 ; 	Loss: 0.3576684594154358
-    # Epoch: 1000 ; Loss: 0.27274689078330994
 
     with torch.no_grad():
         train_output = network(x_train)
@@ -129,28 +114,7 @@ for epoch_idx in range(NUM_EPOCHS):  # how many epochs to use when training the 
         test_loss = criterion(test_output, y_test)
         test_losses.append(test_loss.item())
 
-# Evaluate neural network
-with torch.no_grad():  # with no computing gradients for any tensor operation conducted in the inner block
-    output = network(x_test)
-    test_loss = criterion(output, y_test)
-    test_accuracy = (output.round() == y_test).float().mean()
-    print("Test Loss:", test_loss.item(), ";",
-          "\tTest Accuracy:", test_accuracy.item())
-    # Test Loss: 0.2374035269021988 ; 	Test Accuracy: 0.9399999976158142
-
-
 # Visualize loss history
-num_epochs_less = NUM_EPOCHS//10
-epochs = range(1, num_epochs_less+1)
-plt.plot(epochs, train_losses[:num_epochs_less], "r--")
-plt.plot(epochs, test_losses[:num_epochs_less], "b-")
-plt.legend(["Training Loss", "Test Loss"])
-plt.xlabel("Epoch")
-plt.ylabel("Loss")
-# plt.show()
-plt.savefig('example-21-09-1--torch--reducing-overfitting-with-weight-regularization--Adam.svg')
-plt.close()
-
 epochs = range(1, NUM_EPOCHS+1)
 plt.plot(epochs, train_losses, "r--")
 plt.plot(epochs, test_losses, "b-")
@@ -158,5 +122,5 @@ plt.legend(["Training Loss", "Test Loss"])
 plt.xlabel("Epoch")
 plt.ylabel("Loss")
 # plt.show()
-plt.savefig('example-21-09-2--torch--reducing-overfitting-with-weight-regularization--Adam.svg')
+plt.savefig('example-21-11-1--torch--reducing-overfitting-with-dropout--RMSprop--Dropout.svg')
 plt.close()
