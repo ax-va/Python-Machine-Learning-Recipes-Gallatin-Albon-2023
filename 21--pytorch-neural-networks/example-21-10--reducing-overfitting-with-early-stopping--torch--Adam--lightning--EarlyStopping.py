@@ -4,8 +4,8 @@ Reduce overfitting by stopping training when diverging train and test scores.
 Use PyTorch Lightning to implement a strategy called *early stopping*.
 
 Early stopping can be implemented in PyTorch as a callback function.
-That is, a callback function can be applied at certain stages of the training process,
-such as at the end of each epoch.
+That is, a callback function can be applied at certain stages
+of the training process, such as at the end of each epoch.
 """
 import lightning as pl  # PyTorch Lightning
 import torch
