@@ -6,8 +6,8 @@ Use PyTorch Lightning to implement a strategy called *early stopping*.
 Early stopping can be implemented in PyTorch as a callback function.
 That is, a callback function can be applied at certain stages
 of the training process, such as at the end of each epoch.
-PyTorch does not have any EarlyStopping class,
-hence PyTorch Lightning's EarlyStopping is used.
+PyTorch does not have an early stopping class,
+so PyTorch Lightning's EarlyStopping is used.
 """
 import lightning as pl  # PyTorch Lightning
 import torch
