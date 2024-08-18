@@ -1,8 +1,7 @@
 """
-Use a neural network to make predictions.
+Reduce overfitting by regularizing the weights of your network.
 ->
-Use PyTorch to construct a feedforward neural network,
-then make predictions using the NN class's forward method.
+Penalize the parameters of the network, also called *weight regularization*.
 
 Notice:
 python-dev for using Python API for C should be installed;
@@ -10,14 +9,15 @@ if not, install it on Ubuntu
 $ sudo apt-get install python3.x-dev
 where 3.x is your Python version in your virtual environment.
 """
+import matplotlib.pyplot as plt
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader, TensorDataset
-from torch.optim import RMSprop
+from torch.optim import Adam
 from sklearn.datasets import make_classification
 from sklearn.model_selection import train_test_split
 
-NUM_EPOCHS = 3
+NUM_EPOCHS = 100
 
 # Create data with 10 features and 1000 observations
 features, target = make_classification(
@@ -80,7 +80,13 @@ network = SequentialNN()
 
 # Define loss function, optimizer
 criterion = nn.BCELoss()
-optimizer = RMSprop(network.parameters())
+optimizer = Adam(
+    network.parameters(),
+    lr=1e-4,
+    # weight_decay determines how much to penalize higher parameter values
+    weight_decay=1e-5,
+    # Values greater than 0 indicate L2 regularization in PyTorch
+)
 
 # Wrap data in TensorDataset
 train_data = TensorDataset(x_train, y_train)
@@ -97,6 +103,8 @@ train_loader = DataLoader(
 network = torch.compile(network)
 
 # Train neural network
+train_losses = []
+test_losses = []
 for epoch_idx in range(NUM_EPOCHS):  # how many epochs to use when training the data
     for batch_idx, (data, target) in enumerate(train_loader):
         optimizer.zero_grad()
@@ -104,50 +112,40 @@ for epoch_idx in range(NUM_EPOCHS):  # how many epochs to use when training the 
         loss = criterion(output, target)
         loss.backward()  # to update the gradients
         optimizer.step()
-        print("Epoch:", epoch_idx + 1, ";", "\tLoss:", loss.item())
-        # Epoch: 1 ; 	Loss: 0.6873747110366821
-        # Epoch: 1 ; 	Loss: 0.6832718849182129
-        # Epoch: 1 ; 	Loss: 0.6220871210098267
-        # Epoch: 1 ; 	Loss: 0.4690907299518585
-        # Epoch: 1 ; 	Loss: 0.3916798532009125
-        # Epoch: 1 ; 	Loss: 0.4014907479286194
-        # Epoch: 1 ; 	Loss: 0.3759861886501312
-        # Epoch: 1 ; 	Loss: 0.6534170508384705
-        # Epoch: 1 ; 	Loss: 0.42521628737449646
-        # Epoch: 2 ; 	Loss: 0.3898506164550781
-        # Epoch: 2 ; 	Loss: 0.3298564553260803
-        # Epoch: 2 ; 	Loss: 0.3747923970222473
-        # Epoch: 2 ; 	Loss: 0.39405110478401184
-        # Epoch: 2 ; 	Loss: 0.3992655277252197
-        # Epoch: 2 ; 	Loss: 0.3789174556732178
-        # Epoch: 2 ; 	Loss: 0.3495556712150574
-        # Epoch: 2 ; 	Loss: 0.30129769444465637
-        # Epoch: 2 ; 	Loss: 0.3600539267063141
-        # Epoch: 3 ; 	Loss: 0.41171014308929443
-        # Epoch: 3 ; 	Loss: 0.3562469482421875
-        # Epoch: 3 ; 	Loss: 0.4012618362903595
-        # Epoch: 3 ; 	Loss: 0.2834318280220032
-        # Epoch: 3 ; 	Loss: 0.3406623899936676
-        # Epoch: 3 ; 	Loss: 0.5299634337425232
-        # Epoch: 3 ; 	Loss: 0.2672680914402008
-        # Epoch: 3 ; 	Loss: 0.25573185086250305
-        # Epoch: 3 ; 	Loss: 0.342937707901001
+    print("Epoch:", epoch_idx + 1, ";", "\tLoss:", loss.item())
+    # Epoch: 1 ; 	Loss: 0.7038822770118713
+    # Epoch: 2 ; 	Loss: 0.6934329867362976
+    # Epoch: 3 ; 	Loss: 0.6797105669975281
+    # ...
+    # Epoch: 98 ; 	Loss: 0.5167173147201538
+    # Epoch: 99 ; 	Loss: 0.5005437731742859
+    # Epoch: 100 ; 	Loss: 0.5039573907852173
 
-# Predict classes
-with torch.no_grad():
-    # Round "network.forward(x_train)" to make a class from a probability
-    predicted_classes = network.forward(x_train).round()
+    with torch.no_grad():
+        train_output = network(x_train)
+        train_loss = criterion(train_output, y_train)
+        train_losses.append(train_loss.item())
+        test_output = network(x_test)
+        test_loss = criterion(test_output, y_test)
+        test_losses.append(test_loss.item())
 
-# Concatenate predicted_classes and y_train to compare their first 5 and last 5 values
-torch.cat((predicted_classes[:5, :], y_train[:5, :]), dim=1)
-# tensor([[0., 0.],
-#         [1., 1.],
-#         [1., 1.],
-#         [1., 1.],
-#         [0., 0.]])
-torch.cat((predicted_classes[-5:, :], y_train[-5:, :]), dim=1)
-# tensor([[1., 1.],
-#         [1., 1.],
-#         [0., 0.],
-#         [0., 1.],
-#         [1., 0.]])
+# Evaluate neural network
+with torch.no_grad():  # with no computing gradients for any tensor operation conducted in the inner block
+    output = network(x_test)
+    test_loss = criterion(output, y_test)
+    test_accuracy = (output.round() == y_test).float().mean()
+    print("Test Loss:", test_loss.item(), ";",
+          "\tTest Accuracy:", test_accuracy.item())
+    # Test Loss: 0.44349029660224915 ; 	Test Accuracy: 0.8799999952316284
+
+
+# Visualize loss history
+epochs = range(1, NUM_EPOCHS+1)
+plt.plot(epochs, train_losses, "r--")
+plt.plot(epochs, test_losses, "b-")
+plt.legend(["Training Loss", "Test Loss"])
+plt.xlabel("Epoch")
+plt.ylabel("Loss")
+# plt.show()
+plt.savefig('example-21-09--torch--reducing-overfitting-with-weight-regularization--Adam.svg')
+plt.close()

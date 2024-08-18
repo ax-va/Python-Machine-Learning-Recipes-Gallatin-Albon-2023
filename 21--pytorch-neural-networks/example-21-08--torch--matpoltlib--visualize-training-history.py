@@ -4,6 +4,12 @@ Find the "sweet spot" in a neural network’s loss and accuracy score.
 Use Matplotlib to visualize the loss of the test and training set over each epoch.
 
 "sweet spot" = the test error is at its lowest point.
+
+Notice:
+python-dev for using Python API for C should be installed;
+if not, install it on Ubuntu
+$ sudo apt-get install python3.x-dev
+where 3.x is your Python version in your virtual environment.
 """
 import matplotlib.pyplot as plt
 import torch
