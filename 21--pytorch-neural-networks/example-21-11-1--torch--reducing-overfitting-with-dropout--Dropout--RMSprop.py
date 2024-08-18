@@ -15,7 +15,7 @@ from torch.optim import RMSprop
 from sklearn.datasets import make_classification
 from sklearn.model_selection import train_test_split
 
-NUM_EPOCHS = 50
+NUM_EPOCHS = 1000
 
 # Create data with 10 features and 1000 observations
 features, target = make_classification(
@@ -115,6 +115,18 @@ for epoch_idx in range(NUM_EPOCHS):  # how many epochs to use when training the 
         test_losses.append(test_loss.item())
 
 # Visualize loss history
+num_epochs_less = NUM_EPOCHS // 10
+# for 100 epochs
+epochs = range(1, num_epochs_less+1)
+plt.plot(epochs, train_losses[:num_epochs_less], "r--")
+plt.plot(epochs, test_losses[:num_epochs_less], "b-")
+plt.legend(["Training Loss", "Test Loss"])
+plt.xlabel("Epoch")
+plt.ylabel("Loss")
+# plt.show()
+plt.savefig('example-21-11-1-1--torch--reducing-overfitting-with-dropout--Dropout--RMSprop.svg')
+plt.close()
+# for 1000 epochs
 epochs = range(1, NUM_EPOCHS+1)
 plt.plot(epochs, train_losses, "r--")
 plt.plot(epochs, test_losses, "b-")
@@ -122,5 +134,5 @@ plt.legend(["Training Loss", "Test Loss"])
 plt.xlabel("Epoch")
 plt.ylabel("Loss")
 # plt.show()
-plt.savefig('example-21-11-1--torch--reducing-overfitting-with-dropout--RMSprop--Dropout.svg')
+plt.savefig('example-21-11-1-2--torch--reducing-overfitting-with-dropout--Dropout--RMSprop.svg')
 plt.close()

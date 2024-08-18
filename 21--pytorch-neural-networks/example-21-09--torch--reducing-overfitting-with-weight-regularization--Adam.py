@@ -140,7 +140,8 @@ with torch.no_grad():  # with no computing gradients for any tensor operation co
 
 
 # Visualize loss history
-num_epochs_less = NUM_EPOCHS//10
+num_epochs_less = NUM_EPOCHS // 10
+# for 100 epochs
 epochs = range(1, num_epochs_less+1)
 plt.plot(epochs, train_losses[:num_epochs_less], "r--")
 plt.plot(epochs, test_losses[:num_epochs_less], "b-")
@@ -150,7 +151,7 @@ plt.ylabel("Loss")
 # plt.show()
 plt.savefig('example-21-09-1--torch--reducing-overfitting-with-weight-regularization--Adam.svg')
 plt.close()
-
+# for 1000 epochs
 epochs = range(1, NUM_EPOCHS+1)
 plt.plot(epochs, train_losses, "r--")
 plt.plot(epochs, test_losses, "b-")

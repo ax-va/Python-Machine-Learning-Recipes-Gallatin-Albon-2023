@@ -121,7 +121,8 @@ for epoch_idx in range(NUM_EPOCHS):  # how many epochs to use when training the 
         test_losses.append(test_loss.item())
 
 # Visualize loss history
-num_epochs_less = NUM_EPOCHS//10
+num_epochs_less = NUM_EPOCHS // 10
+# for 100 epochs
 epochs = range(1, num_epochs_less+1)
 plt.plot(epochs, train_losses[:num_epochs_less], "r--")
 plt.plot(epochs, test_losses[:num_epochs_less], "b-")
@@ -129,9 +130,9 @@ plt.legend(["Training Loss", "Test Loss"])
 plt.xlabel("Epoch")
 plt.ylabel("Loss")
 # plt.show()
-plt.savefig('example-21-11-2-1--torch--reducing-overfitting-with-dropout--Adam--Dropout.svg')
+plt.savefig('example-21-11-2-1--torch--reducing-overfitting-with-dropout--Dropout--Adam.svg')
 plt.close()
-
+# for 1000 epochs
 epochs = range(1, NUM_EPOCHS+1)
 plt.plot(epochs, train_losses, "r--")
 plt.plot(epochs, test_losses, "b-")
@@ -139,5 +140,5 @@ plt.legend(["Training Loss", "Test Loss"])
 plt.xlabel("Epoch")
 plt.ylabel("Loss")
 # plt.show()
-plt.savefig('example-21-11-2-2--torch--reducing-overfitting-with-dropout--Adam--Dropout.svg')
+plt.savefig('example-21-11-2-2--torch--reducing-overfitting-with-dropout--Dropout--Adam.svg')
 plt.close()
