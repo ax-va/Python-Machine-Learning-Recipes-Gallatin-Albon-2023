@@ -483,7 +483,7 @@ Logical resource usage: 2.0/8 CPUs, 0/0 GPUs
 │ train_model_f96d1_00000   TERMINATED   0.000169444       27            5.92683   0.680426 │
 ╰───────────────────────────────────────────────────────────────────────────────────────────╯
 
-Best trial config: {'layer_size_1': 256, 'layer_size_2': 128, 'lr': 0.0001694444389910084}
-Best trial final validation loss: 0.6804264187812805
 2024-08-19 16:19:06,458	INFO tune.py:1009 -- Wrote the latest version of all result files and experiment state to '/home/...' in 0.0030s.
 """
+# Best trial config: {'layer_size_1': 256, 'layer_size_2': 128, 'lr': 0.0001694444389910084}
+# Best trial final validation loss: 0.6804264187812805
