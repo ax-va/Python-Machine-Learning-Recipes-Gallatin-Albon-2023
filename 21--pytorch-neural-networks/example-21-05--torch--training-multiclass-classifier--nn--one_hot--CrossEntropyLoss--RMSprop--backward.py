@@ -108,14 +108,14 @@ train_loader = DataLoader(
 network = torch.compile(network)
 
 # Train neural network
-for epoch_idx in range(NUM_EPOCHS):  # how many epochs to use when training the data
+for epoch_idx in range(1, NUM_EPOCHS + 1):  # how many epochs to use when training the data
     for batch_idx, (data, target) in enumerate(train_loader):
         optimizer.zero_grad()
         output = network(data)  # using the forward method
         loss = criterion(output, target)
         loss.backward()  # to update the gradients
         optimizer.step()
-        print("Epoch:", epoch_idx + 1, ";", "\tLoss:", loss.item())
+        print("Epoch:", epoch_idx, ";", "\tLoss:", loss.item())
         # Epoch: 1 ; 	Loss: 1.1043038368225098
         # Epoch: 1 ; 	Loss: 1.035480260848999
         # Epoch: 1 ; 	Loss: 0.9150087237358093

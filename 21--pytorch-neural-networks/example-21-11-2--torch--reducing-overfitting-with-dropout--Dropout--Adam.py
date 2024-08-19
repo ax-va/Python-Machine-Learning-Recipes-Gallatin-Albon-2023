@@ -104,7 +104,7 @@ network = torch.compile(network)
 train_losses = []
 test_losses = []
 # Train neural network
-for epoch_idx in range(NUM_EPOCHS):  # how many epochs to use when training the data
+for epoch_idx in range(1, NUM_EPOCHS + 1):  # how many epochs to use when training the data
     for batch_idx, (data, target) in enumerate(train_loader):
         optimizer.zero_grad()
         output = network(data)  # using the forward method
@@ -120,9 +120,8 @@ for epoch_idx in range(NUM_EPOCHS):  # how many epochs to use when training the 
         test_loss = criterion(test_output, y_test)
         test_losses.append(test_loss.item())
 
-# Visualize loss history
+# Visualize loss history for 100 epochs
 num_epochs_less = NUM_EPOCHS // 10
-# for 100 epochs
 epochs = range(1, num_epochs_less+1)
 plt.plot(epochs, train_losses[:num_epochs_less], "r--")
 plt.plot(epochs, test_losses[:num_epochs_less], "b-")
@@ -132,7 +131,7 @@ plt.ylabel("Loss")
 # plt.show()
 plt.savefig('example-21-11-2-1--torch--reducing-overfitting-with-dropout--Dropout--Adam.svg')
 plt.close()
-# for 1000 epochs
+# Visualize loss history for 1000 epochs
 epochs = range(1, NUM_EPOCHS+1)
 plt.plot(epochs, train_losses, "r--")
 plt.plot(epochs, test_losses, "b-")

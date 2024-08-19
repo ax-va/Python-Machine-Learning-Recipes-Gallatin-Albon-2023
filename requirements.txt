@@ -94,6 +94,7 @@ prompt-toolkit==3.0.43
 protobuf==4.25.3
 ptyprocess==0.7.0
 pure-eval==0.2.2
+pyarrow==17.0.0
 pydantic==2.7.1
 pydantic_core==2.18.2
 pydotplus==2.0.2
@@ -125,6 +126,7 @@ stack-data==0.6.3
 sympy==1.12
 tensorboard==2.16.2
 tensorboard-data-server==0.7.2
+tensorboardX==2.6.2.2
 tensorflow==2.16.2
 tensorflow-hub==0.16.1
 tensorflow-io-gcs-filesystem==0.37.0

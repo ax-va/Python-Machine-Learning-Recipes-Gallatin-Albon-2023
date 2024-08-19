@@ -1,9 +1,7 @@
 """
-Find the "sweet spot" in a neural network’s loss and accuracy score.
+Save the progress in the training process if that is interrupted.
 ->
-Use Matplotlib to visualize the loss of the test and training set over each epoch.
-
-"sweet spot" = the test error is at its lowest point.
+Use the torch.save function to save the model after every epoch.
 
 Notice:
 python-dev for using Python API for C should be installed;
@@ -11,7 +9,6 @@ if not, install it on Ubuntu
 $ sudo apt-get install python3.x-dev
 where 3.x is your Python version in your virtual environment.
 """
-import matplotlib.pyplot as plt
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader, TensorDataset
@@ -19,7 +16,7 @@ from torch.optim import RMSprop
 from sklearn.datasets import make_classification
 from sklearn.model_selection import train_test_split
 
-NUM_EPOCHS = 1000
+NUM_EPOCHS = 5
 
 # Create data with 10 features and 1000 observations
 features, target = make_classification(
@@ -98,8 +95,6 @@ train_loader = DataLoader(
 # Compile the model using torch 2.0's optimizer
 network = torch.compile(network)
 
-train_losses = []
-test_losses = []
 # Train neural network
 for epoch_idx in range(NUM_EPOCHS):  # how many epochs to use when training the data
     for batch_idx, (data, target) in enumerate(train_loader):
@@ -108,33 +103,13 @@ for epoch_idx in range(NUM_EPOCHS):  # how many epochs to use when training the 
         loss = criterion(output, target)
         loss.backward()  # to update the gradients
         optimizer.step()
-
-    with torch.no_grad():
-        train_output = network(x_train)
-        train_loss = criterion(train_output, y_train)
-        train_losses.append(train_loss.item())
-        test_output = network(x_test)
-        test_loss = criterion(test_output, y_test)
-        test_losses.append(test_loss.item())
-
-# Visualize loss history for 100 epochs
-num_epochs_less = NUM_EPOCHS // 10
-epochs = range(1, num_epochs_less + 1)
-plt.plot(epochs, train_losses[:num_epochs_less], "r--")
-plt.plot(epochs, test_losses[:num_epochs_less], "b-")
-plt.legend(["Training Loss", "Test Loss"])
-plt.xlabel("Epoch")
-plt.ylabel("Loss")
-# plt.show()
-plt.savefig('example-21-08-1--visualize-training-history--torch--RMSprop--matplotlib.svg')
-plt.close()
-# Visualize loss history for 1000 epochs
-epochs = range(1, NUM_EPOCHS + 1)
-plt.plot(epochs, train_losses, "r--")
-plt.plot(epochs, test_losses, "b-")
-plt.legend(["Training Loss", "Test Loss"])
-plt.xlabel("Epoch")
-plt.ylabel("Loss")
-# plt.show()
-plt.savefig('example-21-08-2--visualize-training-history--torch--RMSprop--matplotlib.svg')
-plt.close()
+    # Save the model at the end of every epoch
+    torch.save(
+        {
+            'epoch': epoch_idx,
+            'model_state_dict': network.state_dict(),
+            'optimizer_state_dict': optimizer.state_dict(),
+            'loss': loss,
+        },
+        "saved_models/model.pt"
+    )

@@ -105,14 +105,14 @@ network = torch.compile(network)
 # Train neural network
 train_losses = []
 test_losses = []
-for epoch_idx in range(NUM_EPOCHS):  # how many epochs to use when training the data
+for epoch_idx in range(1, NUM_EPOCHS + 1):  # how many epochs to use when training the data
     for batch_idx, (data, target) in enumerate(train_loader):
         optimizer.zero_grad()
         output = network(data)  # using the forward method
         loss = criterion(output, target)
         loss.backward()  # to update the gradients
         optimizer.step()
-    print("Epoch:", epoch_idx + 1, ";", "\tLoss:", loss.item())
+    print("Epoch:", epoch_idx, ";", "\tLoss:", loss.item())
     # Epoch: 1 ; 	Loss: 0.7038822770118713
     # Epoch: 2 ; 	Loss: 0.6934329867362976
     # Epoch: 3 ; 	Loss: 0.6797105669975281
@@ -139,9 +139,8 @@ with torch.no_grad():  # with no computing gradients for any tensor operation co
     # Test Loss: 0.2374035269021988 ; 	Test Accuracy: 0.9399999976158142
 
 
-# Visualize loss history
+# Visualize loss history for 100 epochs
 num_epochs_less = NUM_EPOCHS // 10
-# for 100 epochs
 epochs = range(1, num_epochs_less+1)
 plt.plot(epochs, train_losses[:num_epochs_less], "r--")
 plt.plot(epochs, test_losses[:num_epochs_less], "b-")
@@ -151,7 +150,7 @@ plt.ylabel("Loss")
 # plt.show()
 plt.savefig('example-21-09-1--torch--reducing-overfitting-with-weight-regularization--Adam.svg')
 plt.close()
-# for 1000 epochs
+# Visualize loss history for 1000 epochs
 epochs = range(1, NUM_EPOCHS+1)
 plt.plot(epochs, train_losses, "r--")
 plt.plot(epochs, test_losses, "b-")
