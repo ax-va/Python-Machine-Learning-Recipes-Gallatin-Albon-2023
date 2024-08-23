@@ -4,8 +4,8 @@ Train a neural network to classify text data.
 Use a PyTorch neural network whose first layer is the size of your vocabulary.
 
 *word embeddings* = vector representations of individual words
-where each word is assigned to a specific index in the vector, and
-the value at that location is the number of times
+where each word is assigned to a specific index in the vector,
+and the value at that location is the number of times
 that word appears in a given text part.
 """
 import torch
@@ -77,8 +77,8 @@ y_test.shape
 # (358, )
 
 # Vectorize the text data using a bag-of-words approach such that
-# each word is assigned to a specific index in the vector, and
-# the value at that location is the number of times
+# each word is assigned to a specific index in the vector,
+# and the value at that location is the number of times
 # that word appears in a given text part.
 vectorizer = CountVectorizer(stop_words='english')
 X_train = vectorizer.fit_transform(X_train).toarray()
