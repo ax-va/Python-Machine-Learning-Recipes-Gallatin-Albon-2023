@@ -1,8 +1,9 @@
 """
-Save a trained Scikit-Learn and load it elsewhere.
+Save a trained Scikit-Learn model and load it elsewhere.
 ->
 Save the model as a pickle file using joblib.
 
+Notice:
 joblib extends pickle for cases with large NumPy arrays
 - a common occurrence for trained models in Scikit-Learn.
 """
