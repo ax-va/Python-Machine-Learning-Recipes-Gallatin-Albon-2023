@@ -251,3 +251,9 @@ https://pytorch.org/tutorials/beginner/basics/buildmodel_tutorial.html
 
 ## On Loss Functions for Deep Neural Networks in Classification
 https://arxiv.org/abs/1702.05659
+
+## Hugging Face
+https://huggingface.co/
+
+## Hugging Face: Text classification with transfer learning
+https://huggingface.co/docs/transformers/tasks/sequence_classification
