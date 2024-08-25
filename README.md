@@ -257,3 +257,9 @@ https://huggingface.co/
 
 ## Hugging Face: Text classification with transfer learning
 https://huggingface.co/docs/transformers/tasks/sequence_classification
+
+## TensorFlow: Save, serialize, and export models
+https://www.tensorflow.org/guide/keras/serialization_and_saving
+
+## TensorFlow: The SavedModel format on disk
+https://www.tensorflow.org/guide/saved_model#the_savedmodel_format_on_disk
