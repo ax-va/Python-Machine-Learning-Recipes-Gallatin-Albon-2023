@@ -263,3 +263,6 @@ https://www.tensorflow.org/guide/keras/serialization_and_saving
 
 ## TensorFlow: The SavedModel format on disk
 https://www.tensorflow.org/guide/saved_model#the_savedmodel_format_on_disk
+
+## PyTorch: Saving and Loading Models
+https://pytorch.org/tutorials/beginner/saving_loading_models.html
