@@ -1,7 +1,8 @@
 """
 Save a trained TensorFlow model and load it elsewhere.
 ->
-Save the model using the TensorFlow save method in the `keras` format.
+Save the model using the TensorFlow save method in the `keras` format
+or in the SavedModel (protobuf) format.
 
 See also:
 - TensorFlow: Save, serialize, and export models
@@ -31,8 +32,11 @@ x_train = np.random.random((1000, 10))
 y_train = np.random.random((1000, 1))
 model.fit(x_train, y_train)
 
-# Save the model as `model_tf.keras
-model.save(f"trained_models/model_tf_{tf_version}.keras")
+# Save the model as `model_tf.keras` in the `models` directory
+model.save(f"models/model_tf_{tf_version}.keras")
+
+# Save the model in the SavedModel format in the `models/saved_model` directory
+model.export('models/saved_model')
 
 # Load neural network
-model = keras.models.load_model(f"trained_models/model_tf_{tf_version}.keras")
+model = keras.models.load_model(f"models/model_tf_{tf_version}.keras")

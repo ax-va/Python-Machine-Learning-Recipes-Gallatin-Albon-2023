@@ -120,13 +120,13 @@ torch.save(
         'optimizer_state_dict': optimizer.state_dict(),
         'loss': loss,
     },
-    f"trained_models/model_torch_{torch_version}.pt"
+    f"models/model_torch_{torch_version}.pt"
 )
 
 # Reinitialize neural network
 network = SequentialNN()
 state_dict = torch.load(
-    f"trained_models/model_torch_{torch_version}.pt",
+    f"models/model_torch_{torch_version}.pt",
     map_location=torch.device('cpu')
 )["model_state_dict"]
 network.load_state_dict(state_dict, strict=False)

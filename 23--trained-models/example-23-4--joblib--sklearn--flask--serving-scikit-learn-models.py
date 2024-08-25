@@ -10,7 +10,7 @@ from flask import Flask, request
 app = Flask(__name__)
 
 # Load the model from disk
-model = joblib.load("trained_models/model_sklearn_1_4_1_post1.pkl")
+model = joblib.load("models/model_sklearn_1_4_1_post1.pkl")
 
 
 # Create a predict route that takes JSON data,
@@ -30,7 +30,9 @@ if __name__ == "__main__":
 # Make predictions to the application and get results
 # by submitting data points to the endpoints using curl.
 """
-$ curl -X POST http://127.0.0.1:5000/predict -H 'Content-Type: application/json' -d '{"inputs":[[5.1, 3.5, 1.4, 0.2]]}'
+$ curl -X POST http://127.0.0.1:5000/predict \
+-H 'Content-Type: application/json' \
+-d '{"inputs":[[5.1, 3.5, 1.4, 0.2]]}'
 {"prediction":[0]}
 """
 """

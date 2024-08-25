@@ -27,10 +27,10 @@ classifier = RandomForestClassifier()
 model = classifier.fit(features, target)
 
 # Save model as pickle file
-joblib.dump(model, f"trained_models/model_sklearn_{sklearn_version}.pkl")
+joblib.dump(model, f"models/model_sklearn_{sklearn_version}.pkl")
 
 # Load model from file
-classifier = joblib.load(f"trained_models/model_sklearn_{sklearn_version}.pkl")
+classifier = joblib.load(f"models/model_sklearn_{sklearn_version}.pkl")
 
 # Create new observation
 new_observation = [[5.2, 3.2, 1.1, 0.1]]
