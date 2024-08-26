@@ -9,7 +9,7 @@ See also:
 https://www.tensorflow.org/tfx/guide/serving
 
 Run a container using the public `tensorflow/serving` image
-and mounts the `saved_model` path of the current working directory to 
+and mount the `saved_model` path of the current working directory to 
 `/models/saved_model/1` inside the container.
 ```unix
 $ sudo docker run -p 8501:8501 \
