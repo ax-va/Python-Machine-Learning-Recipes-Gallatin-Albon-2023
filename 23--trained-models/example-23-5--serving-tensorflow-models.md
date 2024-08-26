@@ -4,8 +4,8 @@ Serve a trained TensorFlow model using a web server.
 ->
 Use the open source TensorFlow Serving framework and Docker.
 
-See also:
-## TensorFlow: Serving Models
+## See also:
+- TensorFlow: Serving Models
 https://www.tensorflow.org/tfx/guide/serving
 
 Run a container using the public `tensorflow/serving` image
