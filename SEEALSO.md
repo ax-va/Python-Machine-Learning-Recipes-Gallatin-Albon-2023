@@ -265,3 +265,9 @@ https://pytorch.org/tutorials/beginner/saving_loading_models.html
 
 ## TensorFlow: Serving Models
 https://www.tensorflow.org/tfx/guide/serving
+
+## Seldon Core Python Package
+https://docs.seldon.io/projects/seldon-core/en/latest/python/python_module.html
+
+## PyTorch: TorchServe
+https://pytorch.org/serve/

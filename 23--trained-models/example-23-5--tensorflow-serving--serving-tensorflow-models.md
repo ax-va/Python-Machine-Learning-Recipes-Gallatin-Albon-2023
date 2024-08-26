@@ -2,7 +2,7 @@
 
 Serve a trained TensorFlow model using a web server.
 ->
-Use the open source TensorFlow Serving framework and Docker.
+Use the open source TensorFlow Serving framework (with the HTTP and gRPC server) and Docker.
 
 ## See also:
 - TensorFlow: Serving Models
