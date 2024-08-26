@@ -154,6 +154,8 @@ Open `http://localhost:8501/v1/models/saved_model/metadata`
 Predict a value
 ```ubuntu
 $ curl -X POST http://localhost:8501/v1/models/saved_model:predict -d '{"inputs":[[1,2,3,4,5,6,7,8,9,10]]}'
+```
+```ubuntu
 {
     "outputs": [
         [
