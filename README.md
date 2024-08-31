@@ -6,4 +6,4 @@ Machine learning recipes in Python with **scikit-learn**, **OpenCV**, **PyTorch*
   <img src="https://github.com/ax-va/Python-Machine-Learning-Recipes-Gallatin-Albon-2023/blob/main/cookbook.jpg" width="400" />
 </p>
 
-The ML recipes were tested with Python 3.11 and the packages listed in `requirements.txt`.
+My environment was Python 3.11 with the packages listed in `requirements.txt`.
