@@ -5,14 +5,27 @@ that mimics a remote server on localhost.
 See:
 https://github.com/kylegallatin/mysql-db-example
 
-To start:
-$ sudo docker run -it -p 3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=yes kylegallatin/ml-python-cookbook-mysql --secure-file-priv=/
+To run a container from the image:
+```console
+$ docker run -d \
+  -p 3306:3306 \
+  -e MYSQL_ALLOW_EMPTY_PASSWORD=yes kylegallatin/ml-python-cookbook-mysql \
+  --secure-file-priv=/
+...
+ac4f35dcb0b515102a7ccf982713591dfa66672a60941091e2b4b203a5c4ab80
+```
 
-To stop:
-$ top
-Find PID of mysql, then
-$ sudo kill <PID>
+To force-remove the running container:
+```console
+$ docker rm -f ac4f
+ac4f
+```
+
+To remove the image stored locally:
+```console
+$ docker image rm kylegallatin/ml-python-cookbook-mysql
 """
+
 import pymysql
 import pandas as pd
 

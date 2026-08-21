@@ -1,3 +1,8 @@
 # images from https://github.com/chrisalbon/sim_data/tree/main/images
+__pycache__/
+*.pyc
+.idea
+venv/
+
 images/raw
 /21--pytorch-neural-networks/lightning_logs/
